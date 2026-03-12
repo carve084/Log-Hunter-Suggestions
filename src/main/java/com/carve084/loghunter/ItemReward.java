@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * Represents a reward that is a specific item for the Collection Log.
+ * This is primarily a data class holding information about the item's drop mechanics.
+ */
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor

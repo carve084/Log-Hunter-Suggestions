@@ -43,6 +43,12 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.ScheduledExecutorService;
 
+/**
+ * The main entry point for the Log Hunter Suggestions plugin.
+ * This class is responsible for initializing the UI panel, loading data,
+ * listening to game events, orchestrating suggestion calculations, and
+ * handling all interactions with the RuneLite client and the user.
+ */
 @Slf4j
 @PluginDescriptor(
         name = "Log Hunter Suggestions"
@@ -85,6 +91,10 @@ public class LogHunterPlugin extends Plugin
     private boolean calculationPending = false;
     private boolean requiresScan = false;
 
+    /**
+     * A wrapper class for persisting all plugin data to a single JSON file.
+     * This includes the player's collection log, skipped activities, and scan progress.
+     */
     @lombok.Data
     private static class PluginData {
         private Map<Integer, Integer> logData = new HashMap<>();
@@ -97,6 +107,11 @@ public class LogHunterPlugin extends Plugin
     private PluginData pluginData = new PluginData();
     private List<Activity> activities = new ArrayList<>();
 
+    /**
+     * Called when the plugin is started.
+     * Initializes the custom Gson parser, sets up the UI panel and navigation button,
+     * loads activity and user data, and queues the initial suggestion calculation.
+     */
     @Override
     protected void startUp() throws Exception
     {
@@ -130,6 +145,10 @@ public class LogHunterPlugin extends Plugin
         log.info("Log Hunter started!");
     }
 
+    /**
+     * Called when the plugin is stopped.
+     * Persists the current plugin data and removes the navigation button from the toolbar.
+     */
     @Override
     protected void shutDown() throws Exception
     {
@@ -138,6 +157,10 @@ public class LogHunterPlugin extends Plugin
         log.info("Log Hunter stopped!");
     }
 
+    /**
+     * Configures a custom Gson instance with type adapters for handling the polymorphic
+     * {@link Reward} and {@link Requirement} classes in the JSON data.
+     */
     private void buildCustomGson()
     {
         JsonDeserializer<Reward> rewardDeserializer = (json, typeOfT, context) -> {
@@ -170,6 +193,10 @@ public class LogHunterPlugin extends Plugin
                 .create();
     }
 
+    /**
+     * Saves the current {@link PluginData} to a JSON file on a background thread
+     * to prevent any impact on game performance.
+     */
     private void saveData()
     {
         executor.execute(() -> {
@@ -191,6 +218,11 @@ public class LogHunterPlugin extends Plugin
         });
     }
 
+    /**
+     * Loads the {@link PluginData} from its JSON file. If the file doesn't exist or is
+     * corrupted, it initializes with a fresh data object. Also triggers the initial
+     * evaluation of the collection log scan requirement.
+     */
     private void loadData()
     {
         File file = new File(PLUGIN_DIR, DATA_FILE);
@@ -224,6 +256,11 @@ public class LogHunterPlugin extends Plugin
         evaluateScanRequirement();
     }
 
+    /**
+     * Queues a new suggestion calculation to be run on the client thread.
+     * This method acts as a debouncer, ensuring that multiple rapid-fire events
+     * (e.g., during login) only result in a single calculation.
+     */
     private void queueCalculateSuggestions()
     {
         if (calculationPending) return;
@@ -235,6 +272,12 @@ public class LogHunterPlugin extends Plugin
         });
     }
 
+    /**
+     * Determines if the user needs to scan their collection log.
+     * A scan is required if the set of known pages (scraped from the log interface)
+     * contains any pages not present in the set of scanned pages. This state is updated
+     * and a recalculation is queued if the state changes.
+     */
     private void evaluateScanRequirement()
     {
         boolean missingScans = false;
@@ -259,8 +302,11 @@ public class LogHunterPlugin extends Plugin
     }
 
     /**
-     * Recursively traverses all nested layers of a widget to find any text components.
-     * By starting at the Collection Log's list container (621.9), this isolates just the page names.
+     * Recursively traverses a widget and its children to find all visible text components.
+     * Used to scrape the names of the pages in the collection log.
+     *
+     * @param root The root widget to start the traversal from.
+     * @param results A list to populate with any text-containing widgets found.
      */
     private void getActiveTextWidgets(Widget root, List<Widget> results) {
         if (root == null || root.isHidden()) return;
@@ -285,6 +331,11 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Fired when the game's state changes.
+     * Used to trigger a recalculation when the player logs in.
+     * @param event The state change event.
+     */
     @Subscribe
     public void onGameStateChanged(GameStateChanged event)
     {
@@ -294,6 +345,12 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Fired when a player's skill level or experience changes.
+     * Caches the new level and queues a recalculation to update suggestions
+     * that may be affected by the new stat.
+     * @param event The stat change event.
+     */
     @Subscribe
     public void onStatChanged(StatChanged event)
     {
@@ -307,6 +364,12 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Fired when a widget is closed.
+     * Specifically used to detect the closing of the quest completion scroll,
+     * which indicates a potential change in met requirements.
+     * @param event The widget closed event.
+     */
     @Subscribe
     public void onWidgetClosed(WidgetClosed event)
     {
@@ -317,6 +380,12 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Fired when a plugin configuration value is changed.
+     * Triggers a data reload if ironman rates are toggled, or a recalculation
+     * for any other relevant config change.
+     * @param event The config change event.
+     */
     @Subscribe
     public void onConfigChanged(ConfigChanged event)
     {
@@ -338,6 +407,14 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Fired on every game tick. This method contains the logic for scraping
+     * the collection log for item completion data and page scan progress.
+     * If any data changes are detected, it saves the new data and queues a
+     * recalculation. It is also responsible for dynamically injecting the
+     * yellow '*' next to unscanned page names.
+     * @param event The game tick event.
+     */
     @Subscribe
     public void onGameTick(GameTick event)
     {
@@ -430,6 +507,10 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Loads the list of all trackable activities from the appropriate JSON file.
+     * The file used (main vs. ironman) depends on the plugin configuration.
+     */
     private void loadActivities()
     {
         String jsonFileName = config.useIronmanRates() ? "/activities_iron.json" : "/activities_main.json";
@@ -458,6 +539,12 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * The core logic engine of the plugin. This method iterates through all loaded activities,
+     * calculates the time to the next reward for each one, sorts the results, and passes
+     * the ranked list to the UI panel for display. It also handles the special UI states
+     * for being logged out or requiring a collection log scan.
+     */
     private void calculateSuggestions()
     {
         // 1. Check if logged in. If not, bypass math and tell UI to show login screen.
@@ -535,18 +622,30 @@ public class LogHunterPlugin extends Plugin
         );
     }
 
+    /**
+     * Adds an activity to the set of skipped activities and triggers a save and recalculation.
+     * @param activityName The name of the activity to skip.
+     */
     private void skipActivity(String activityName) {
         pluginData.getSkippedActivities().add(activityName);
         saveData();
         queueCalculateSuggestions();
     }
 
+    /**
+     * Removes an activity from the set of skipped activities and triggers a save and recalculation.
+     * @param activityName The name of the activity to unskip.
+     */
     private void unskipActivity(String activityName) {
         pluginData.getSkippedActivities().remove(activityName);
         saveData();
         queueCalculateSuggestions();
     }
 
+    /**
+     * Toggles the completion status of a specific item ID for debugging purposes.
+     * @param itemId The item ID to toggle.
+     */
     private void toggleItemStatus(int itemId)
     {
         int currentStatus = pluginData.getLogData().getOrDefault(itemId, 0);
@@ -559,6 +658,10 @@ public class LogHunterPlugin extends Plugin
         queueCalculateSuggestions();
     }
 
+    /**
+     * Toggles a quest's status to be mocked as "incomplete" for debugging purposes.
+     * @param questName The name of the quest to toggle.
+     */
     private void toggleMockQuest(String questName) {
         String formatted = questName.toUpperCase().replace(" ", "_");
 
@@ -574,6 +677,10 @@ public class LogHunterPlugin extends Plugin
         queueCalculateSuggestions();
     }
 
+    /**
+     * Prints a list of activities to the in-game chat for which the player meets the
+     * hard requirements but not the recommended ones.
+     */
     private void printMissingRecommendations() {
         if (client.getGameState() != net.runelite.api.GameState.LOGGED_IN) {
             log.warn("Cannot check stats while logged out.");
@@ -617,6 +724,11 @@ public class LogHunterPlugin extends Plugin
         }
     }
 
+    /**
+     * Formats a duration in hours into a h:mm:ss string.
+     * @param hours The duration in fractional hours.
+     * @return A formatted time string.
+     */
     private String formatTime(double hours)
     {
         if (hours == Double.MAX_VALUE) return "COMPLETED";
@@ -628,6 +740,11 @@ public class LogHunterPlugin extends Plugin
         return String.format("%d:%02d:%02d", displayHours, displayMinutes, displaySeconds);
     }
 
+    /**
+     * Provides a detailed report on a specific activity for debugging purposes,
+     * displaying it in a JOptionPane dialog.
+     * @param searchString The name of the activity to inspect.
+     */
     private void inspectActivity(String searchString)
     {
         if (client.getGameState() != GameState.LOGGED_IN) {
@@ -758,12 +875,22 @@ public class LogHunterPlugin extends Plugin
         });
     }
 
+    /**
+     * Provides the plugin's configuration object to the Guice dependency injector.
+     * @param configManager The RuneLite ConfigManager.
+     * @return The configuration object for this plugin.
+     */
     @Provides
     LogHunterConfig provideConfig(ConfigManager configManager)
     {
         return configManager.getConfig(LogHunterConfig.class);
     }
 
+    /**
+     * A simple data class to hold a calculated activity suggestion, pairing the
+     * {@link Activity} with its {@link Activity.CalculationResult} and the
+     * formatted name of its fastest reward.
+     */
     @lombok.Getter
     @lombok.AllArgsConstructor
     public static class ActivitySuggestion {

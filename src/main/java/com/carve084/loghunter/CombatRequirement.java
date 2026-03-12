@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 import net.runelite.api.Client;
 import java.util.Set;
 
+/**
+ * A requirement based on the player's combat level.
+ */
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,6 +16,13 @@ public class CombatRequirement implements Requirement {
     private String type = "COMBAT";
     private int level;
 
+    /**
+     * Checks if the player's combat level is at or above the required level.
+     *
+     * @param client The RuneLite Client object.
+     * @param mockedIncomplete Unused for this requirement type.
+     * @return {@code true} if the combat level is sufficient, {@code false} otherwise.
+     */
     @Override
     public boolean isMet(Client client, Set<String> mockedIncomplete) {
         // Prevent NullPointerExceptions if the plugin calculates while the player entity is loading

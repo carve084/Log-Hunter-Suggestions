@@ -1,16 +1,40 @@
+import os
 import csv
 import json
 import requests
 import io
 
+"""
+Data Conversion Script for the Log Hunter Plugin.
+
+This script fetches activity data, which is maintained in a public Google Sheet,
+and converts it into two JSON files (`activities_main.json` and `activities_iron.json`)
+that are bundled with the RuneLite plugin.
+
+It reads two separate CSVs from the Google Sheet:
+1.  'RATES_URL': Contains kills-per-hour, experience rates, and requirements.
+2.  'MAP_URL': Maps activities to specific item rewards and their drop mechanics.
+
+The script processes this data, combines it into a structured format, and
+exports the final lists of activities, one for main accounts and one for ironman accounts.
+"""
+
 # --- CONFIGURATION ---
 RATES_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTerCEPRUUTwIsHH9MjRvQmSecIRYnqhaXH2udmKATlP9OzRmRil5MZHgbzVF32QvlJMLLhmVbY5wT0/pub?gid=18799852&single=true&output=csv"
 MAP_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTerCEPRUUTwIsHH9MjRvQmSecIRYnqhaXH2udmKATlP9OzRmRil5MZHgbzVF32QvlJMLLhmVbY5wT0/pub?gid=0&single=true&output=csv"
 
-OUTPUT_MAIN = 'activities_main.json'
-OUTPUT_IRON = 'activities_iron.json'
+# 1. Get the directory where this script (convert.py) is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Go up one level (to project root) and then into src/main/resources
+RESOURCE_DIR = os.path.join(SCRIPT_DIR, '..', 'src', 'main', 'resources')
+
+# 3. Create absolute paths for the output files
+OUTPUT_MAIN = os.path.join(RESOURCE_DIR, 'activities_main.json')
+OUTPUT_IRON = os.path.join(RESOURCE_DIR, 'activities_iron.json')
 
 
+# Fetches CSV data from a given URL and returns a CSV DictReader object.
 def fetch_csv_data(url):
     print(f"Downloading data from {url[:40]}...")
     # CHANGED: Added timeout parameter to prevent infinite hanging
@@ -19,6 +43,7 @@ def fetch_csv_data(url):
     return csv.DictReader(io.StringIO(response.text))
 
 
+# Cleans a string value, removing commas, and converts it to a float. Returns 0.0 on failure.
 def clean_number(value):
     if not value: return 0.0
     try:
@@ -27,11 +52,13 @@ def clean_number(value):
         return 0.0
 
 
+# Checks if a string value represents a boolean 'true'.
 def is_true(val):
     if not val: return False
     return str(val).strip().upper() in ['TRUE', '1', 'YES', 'Y']
 
 
+# Parses a comma-separated requirement string (e.g., "SKILL:ATTACK:90,QUEST:DT2") into a list of requirement objects.
 def parse_requirements(req_str):
     reqs =[]
     if not req_str: return reqs
@@ -49,6 +76,7 @@ def parse_requirements(req_str):
     return reqs
 
 
+# Parses a comma-separated experience rate string (e.g., "ATTACK:15000,STRENGTH:15000") into a dictionary.
 def parse_exp(exp_str):
     exp_rates = {}
     if not exp_str: return exp_rates
@@ -60,6 +88,7 @@ def parse_exp(exp_str):
     return exp_rates
 
 
+# Main processing function that reads, combines, and structures the activity data.
 def process_data(rates_reader, map_reader, kph_col, exp_col):
     activities = {}
 
@@ -114,6 +143,7 @@ def process_data(rates_reader, map_reader, kph_col, exp_col):
     return [a for a in activities.values() if a['totalItemRewards'] > 0]
 
 
+# Main execution block.
 def main():
     try:
         rates_data = list(fetch_csv_data(RATES_URL))

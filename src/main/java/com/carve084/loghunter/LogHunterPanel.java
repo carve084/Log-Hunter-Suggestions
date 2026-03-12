@@ -28,6 +28,13 @@ import net.runelite.client.ui.ColorScheme;
 import net.runelite.client.ui.FontManager;
 import net.runelite.client.ui.PluginPanel;
 
+/**
+ * The main UI panel for the Log Hunter plugin.
+ * This class is responsible for building and managing all Swing components,
+ * and for rendering the suggestion list based on the data provided by the
+ * main plugin class. It handles various UI states, such as logged out,
+ * needing a collection log scan, or displaying suggestions.
+ */
 public class LogHunterPanel extends PluginPanel
 {
     // Main containers
@@ -72,6 +79,16 @@ public class LogHunterPanel extends PluginPanel
     // GridBag Constraints for the main container
     private final GridBagConstraints mainGc;
 
+    /**
+     * Constructs the UI panel and all of its sub-components.
+     *
+     * @param onToggleItem A callback executed when the debug "Toggle Item" button is clicked.
+     * @param onInspectActivity A callback executed when the debug "Inspect" button is clicked.
+     * @param onSkipActivity A callback executed when any "Skip" button is clicked.
+     * @param onUnskipActivity A callback executed when an "Unskip" button is clicked.
+     * @param onToggleQuest A callback executed when the debug "Mock Quest" button is clicked.
+     * @param onPrintMissingRecs A callback executed when the debug "Print Missing Recs" button is clicked.
+     */
     public LogHunterPanel(
             Consumer<Integer> onToggleItem,
             Consumer<String> onInspectActivity,
@@ -274,6 +291,14 @@ public class LogHunterPanel extends PluginPanel
         mainContainer.add(Box.createGlue(), mainGc);
     }
 
+    /**
+     * A helper method to create a standard title/value row in a GridBagLayout panel.
+     * @param panel The panel to add the row to.
+     * @param c The GridBagConstraints to use.
+     * @param title The text for the left-aligned title label.
+     * @param valueLabel The JLabel to use for the right-aligned value.
+     * @return The created title JLabel.
+     */
     private JLabel addLabelRow(JPanel panel, GridBagConstraints c, String title, JLabel valueLabel) {
         JLabel titleLabel = new JLabel(title);
         titleLabel.setForeground(Color.LIGHT_GRAY);
@@ -292,6 +317,21 @@ public class LogHunterPanel extends PluginPanel
         return titleLabel;
     }
 
+    /**
+     * The main public method for updating the entire UI panel.
+     * It takes the latest calculated data and rebuilds the panel components
+     * to reflect the current state. This method is responsible for switching
+     * between the "logged out," "scan required," and "show suggestions" views.
+     * This method must be called on the Swing Event Dispatch Thread.
+     *
+     * @param suggestions The ranked list of activity suggestions.
+     * @param skippedActivities A set of names of currently skipped activities.
+     * @param mockedQuests A set of names for quests being mocked as incomplete.
+     * @param isDebugMode A flag indicating if debug mode is enabled.
+     * @param suggestionLimit The maximum number of runner-up suggestions to display.
+     * @param isLoggedIn A flag indicating if the player is currently logged into the game.
+     * @param requiresScan A flag indicating if the player needs to scan their collection log.
+     */
     public void updateSuggestions(
             List<LogHunterPlugin.ActivitySuggestion> suggestions,
             Set<String> skippedActivities,
@@ -417,6 +457,10 @@ public class LogHunterPanel extends PluginPanel
         });
     }
 
+    /**
+     * Populates the top suggestion panel with the data from the best activity suggestion.
+     * @param best The top-ranked activity suggestion.
+     */
     private void updateTopResultUI(LogHunterPlugin.ActivitySuggestion best)
     {
         Activity activity = best.getActivity();
@@ -466,6 +510,12 @@ public class LogHunterPanel extends PluginPanel
         }
     }
 
+    /**
+     * Creates a single runner-up row component for the suggestion list.
+     * @param rank The rank of the suggestion (e.g., 2, 3, 4).
+     * @param suggestion The activity suggestion to display.
+     * @return A JPanel representing the formatted row.
+     */
     private JPanel createRunnerUpRow(int rank, LogHunterPlugin.ActivitySuggestion suggestion)
     {
         JPanel panel = new JPanel(new BorderLayout(5, 0));
@@ -502,12 +552,23 @@ public class LogHunterPanel extends PluginPanel
         return panel;
     }
 
+    /**
+     * Truncates a string to a maximum length, adding an ellipsis if truncated.
+     * @param text The string to truncate.
+     * @param maxLength The maximum allowed length.
+     * @return The potentially truncated string.
+     */
     private String truncate(String text, int maxLength)
     {
         if (text == null || text.length() <= maxLength) return text;
         return text.substring(0, maxLength) + "…";
     }
 
+    /**
+     * Formats a given duration in hours into a detailed hh:mm:ss string.
+     * @param hours The duration in fractional hours.
+     * @return A formatted string in the format "h:mm:ss".
+     */
     private String formatTimeDetailed(double hours)
     {
         if (hours == Double.MAX_VALUE) return "N/A";
@@ -520,6 +581,11 @@ public class LogHunterPanel extends PluginPanel
         return String.format("%d:%02d:%02d", displayHours, displayMinutes, displaySeconds);
     }
 
+    /**
+     * Formats a given duration in hours into a simplified "Xh Ym" or "Ym" string.
+     * @param hours The duration in fractional hours.
+     * @return A formatted, simplified time string.
+     */
     private String formatTime(double hours)
     {
         if (hours == Double.MAX_VALUE) return "N/A";
