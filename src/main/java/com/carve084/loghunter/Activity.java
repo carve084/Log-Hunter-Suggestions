@@ -24,9 +24,10 @@ import java.util.Set;
 @NoArgsConstructor
 public class Activity
 {
-    private String name;
-    private double killsPerHour;
-    private List<Requirement> requirements;
+	private String name;
+	private String wikiLink;
+	private double killsPerHour;
+	private List<Requirement> requirements;
     private List<Requirement> recommended;
     private Map<String, Double> experienceRates;
     private List<Reward> rewards;

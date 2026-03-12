@@ -1,6 +1,7 @@
 [
   {
     "name": "Killing abyssal sire (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_Sire/Strategies",
     "killsPerHour": 50.0,
     "requirements": [
       {
@@ -158,6 +159,7 @@
   },
   {
     "name": "Killing alchemical hydra (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Alchemical_Hydra/Strategies",
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -315,6 +317,7 @@
   },
   {
     "name": "Killing amoxliatl",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Amoxliatl/Strategies",
     "killsPerHour": 85.0,
     "requirements": [
       {
@@ -407,6 +410,7 @@
   },
   {
     "name": "Killing araxxor (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Araxxor/Strategies",
     "killsPerHour": 45.0,
     "requirements": [
       {
@@ -572,6 +576,7 @@
   },
   {
     "name": "Opening barrows chests",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Barrows/Strategies",
     "killsPerHour": 22.0,
     "requirements": [
       {
@@ -819,6 +824,7 @@
   },
   {
     "name": "Killing bryophyta",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Killing_Bryophyta_(free-to-play)",
     "killsPerHour": 100.0,
     "requirements": [],
     "recommended": [
@@ -912,6 +918,7 @@
   },
   {
     "name": "Killing artio",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Artio/Strategies",
     "killsPerHour": 60.0,
     "requirements": [],
     "recommended": [
@@ -1008,6 +1015,7 @@
   },
   {
     "name": "Killing cerberus (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Cerberus/Strategies",
     "killsPerHour": 65.0,
     "requirements": [
       {
@@ -1126,6 +1134,7 @@
   },
   {
     "name": "Killing chaos elemental",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chaos_Elemental/Strategies",
     "killsPerHour": 120.0,
     "requirements": [],
     "recommended": [
@@ -1193,6 +1202,7 @@
   },
   {
     "name": "Killing chaos fanatic",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chaos_Fanatic/Strategies",
     "killsPerHour": 100.0,
     "requirements": [],
     "recommended": [
@@ -1255,6 +1265,7 @@
   },
   {
     "name": "Killing commander zilyana",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Commander_Zilyana/Strategies",
     "killsPerHour": 58.0,
     "requirements": [
       {
@@ -1385,6 +1396,7 @@
   },
   {
     "name": "Killing corporeal beast",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Corporeal_Beast/Strategies",
     "killsPerHour": 60.0,
     "requirements": [],
     "recommended": [
@@ -1483,6 +1495,7 @@
   },
   {
     "name": "Killing crazy archaeologist",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Crazy_archaeologist/Strategies",
     "killsPerHour": 75.0,
     "requirements": [],
     "recommended": [
@@ -1545,6 +1558,7 @@
   },
   {
     "name": "Killing dagganoth kings (3 kills = 1 of each king)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Dagannoth_Kings/Strategies",
     "killsPerHour": 105.0,
     "requirements": [
       {
@@ -1698,6 +1712,7 @@
   },
   {
     "name": "Killing deranged archaeologist",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deranged_archaeologist/Strategies",
     "killsPerHour": 80.0,
     "requirements": [
       {
@@ -1757,6 +1772,7 @@
   },
   {
     "name": "Delving to depth 10 (doom of mokhaiotl)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Doom_of_Mokhaiotl/Strategies",
     "killsPerHour": 3.5,
     "requirements": [
       {
@@ -1863,6 +1879,7 @@
   },
   {
     "name": "Killing duke sucellus",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Duke_Sucellus/Strategies",
     "killsPerHour": 41.0,
     "requirements": [
       {
@@ -1988,6 +2005,7 @@
   },
   {
     "name": "Finishing fight caves (and gambling cape, on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/TzHaar_Fight_Cave/Strategies",
     "killsPerHour": 2.5,
     "requirements": [
       {
@@ -2051,6 +2069,7 @@
   },
   {
     "name": "Killing sol heredit (and gambling quiver, fortis colosseum)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Fortis_Colosseum/Strategies",
     "killsPerHour": 2.5,
     "requirements": [
       {
@@ -2175,6 +2194,7 @@
   },
   {
     "name": "Opening reward chest (gauntlet)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Gauntlet/Strategies",
     "killsPerHour": 10.0,
     "requirements": [
       {
@@ -2249,6 +2269,7 @@
   },
   {
     "name": "Opening reward chest (corrupted gauntlet)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Gauntlet/Strategies",
     "killsPerHour": 7.0,
     "requirements": [
       {
@@ -2331,6 +2352,7 @@
   },
   {
     "name": "Killing general graardor",
+    "wikiLink": "https://oldschool.runescape.wiki/w/General_Graardor/Strategies",
     "killsPerHour": 58.0,
     "requirements": [
       {
@@ -2488,6 +2510,7 @@
   },
   {
     "name": "Killing giant mole",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Giant_Mole/Strategies",
     "killsPerHour": 125.0,
     "requirements": [],
     "recommended": [
@@ -2581,6 +2604,7 @@
   },
   {
     "name": "Killing grotesque guardians (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Grotesque_Guardians/Strategies",
     "killsPerHour": 37.0,
     "requirements": [
       {
@@ -2697,6 +2721,7 @@
   },
   {
     "name": "Harvesting hespori",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Hespori/Strategies",
     "killsPerHour": 95.0,
     "requirements": [
       {
@@ -2762,6 +2787,7 @@
   },
   {
     "name": "Killing the hueycoatl (1+2)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Hueycoatl/Strategies",
     "killsPerHour": 11.0,
     "requirements": [
       {
@@ -2860,6 +2886,7 @@
   },
   {
     "name": "Finishing inferno (and gambling cape, on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Inferno/Strategies",
     "killsPerHour": 1.0,
     "requirements": [
       {
@@ -2923,6 +2950,7 @@
   },
   {
     "name": "Killing kalphite queen",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Kalphite_Queen/Strategies",
     "killsPerHour": 55.0,
     "requirements": [],
     "recommended": [
@@ -3033,6 +3061,7 @@
   },
   {
     "name": "Killing king black dragon",
+    "wikiLink": "https://oldschool.runescape.wiki/w/King_Black_Dragon/Strategies",
     "killsPerHour": 130.0,
     "requirements": [],
     "recommended": [
@@ -3127,6 +3156,7 @@
   },
   {
     "name": "Killing kraken (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Kraken/Strategies",
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -3217,6 +3247,7 @@
   },
   {
     "name": "Killing kree'arra",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Kree%27arra/Strategies",
     "killsPerHour": 40.0,
     "requirements": [
       {
@@ -3364,6 +3395,7 @@
   },
   {
     "name": "Killing k'ril tsutsaroth",
+    "wikiLink": "https://oldschool.runescape.wiki/w/K%27ril_Tsutsaroth/Strategies",
     "killsPerHour": 65.0,
     "requirements": [
       {
@@ -3509,6 +3541,7 @@
   },
   {
     "name": "Killing the leviathan",
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Leviathan/Strategies",
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -3621,6 +3654,7 @@
   },
   {
     "name": "Killing eclipse moon (moons of peril)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies",
     "killsPerHour": 18.0,
     "requirements": [
       {
@@ -3717,6 +3751,7 @@
   },
   {
     "name": "Killing blue moon (moons of peril)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies",
     "killsPerHour": 18.0,
     "requirements": [
       {
@@ -3813,6 +3848,7 @@
   },
   {
     "name": "Killing blood moon (moons of peril)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Moons_of_Peril/Strategies",
     "killsPerHour": 18.0,
     "requirements": [
       {
@@ -3909,6 +3945,7 @@
   },
   {
     "name": "Killing nex (6 person team)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Nex/Strategies",
     "killsPerHour": 15.0,
     "requirements": [
       {
@@ -4014,6 +4051,7 @@
   },
   {
     "name": "Killing the nightmare of ashihama (5 person team)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Nightmare/Strategies",
     "killsPerHour": 11.0,
     "requirements": [
       {
@@ -4149,6 +4187,7 @@
   },
   {
     "name": "Killing phosani's nightmare",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Phosani%27s_Nightmare/Strategies",
     "killsPerHour": 8.0,
     "requirements": [
       {
@@ -4312,6 +4351,7 @@
   },
   {
     "name": "Killing obor",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Obor#Strategy",
     "killsPerHour": 120.0,
     "requirements": [],
     "recommended": [
@@ -4410,6 +4450,7 @@
   },
   {
     "name": "Killing phantom muspah",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Phantom_Muspah/Strategies",
     "killsPerHour": 26.0,
     "requirements": [
       {
@@ -4524,6 +4565,7 @@
   },
   {
     "name": "Looting branda, the fire queen (royal titans)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans/Strategies",
     "killsPerHour": 60.0,
     "requirements": [],
     "recommended": [
@@ -4631,6 +4673,7 @@
   },
   {
     "name": "Looting eldric, the ice king (royal titans)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Royal_Titans/Strategies",
     "killsPerHour": 60.0,
     "requirements": [],
     "recommended": [
@@ -4738,6 +4781,7 @@
   },
   {
     "name": "Killing sarachnis",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Sarachnis/Strategies",
     "killsPerHour": 80.0,
     "requirements": [],
     "recommended": [
@@ -4838,6 +4882,7 @@
   },
   {
     "name": "Killing scorpia",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Scorpia/Strategies",
     "killsPerHour": 130.0,
     "requirements": [],
     "recommended": [
@@ -4918,6 +4963,7 @@
   },
   {
     "name": "Killing scurrius",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Scurrius/Strategies",
     "killsPerHour": 85.0,
     "requirements": [],
     "recommended": [
@@ -4997,6 +5043,7 @@
   },
   {
     "name": "Killing shellbane gryphon",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Shellbane_gryphon/Strategies",
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -5115,6 +5162,7 @@
   },
   {
     "name": "Killing skotizo",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Skotizo/Strategies",
     "killsPerHour": 0.45,
     "requirements": [],
     "recommended": [
@@ -5212,6 +5260,7 @@
   },
   {
     "name": "Fishing from the reward pool (tempoross)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tempoross/Strategies",
     "killsPerHour": 80.0,
     "requirements": [
       {
@@ -5325,6 +5374,7 @@
   },
   {
     "name": "Killing thermonuclear smoke devil (on task)",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Thermonuclear_smoke_devil/Strategies",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -5431,6 +5481,7 @@
   },
   {
     "name": "Killing vardorvis",
+    "wikiLink": null,
     "killsPerHour": 37.0,
     "requirements": [
       {
@@ -5552,6 +5603,7 @@
   },
   {
     "name": "Killing spindel",
+    "wikiLink": null,
     "killsPerHour": 55.0,
     "requirements": [],
     "recommended": [
@@ -5652,6 +5704,7 @@
   },
   {
     "name": "Killing calvar'ion",
+    "wikiLink": null,
     "killsPerHour": 55.0,
     "requirements": [],
     "recommended": [
@@ -5765,6 +5818,7 @@
   },
   {
     "name": "Killing vorkath",
+    "wikiLink": null,
     "killsPerHour": 34.0,
     "requirements": [
       {
@@ -5886,6 +5940,7 @@
   },
   {
     "name": "Killing the whisperer",
+    "wikiLink": null,
     "killsPerHour": 21.0,
     "requirements": [
       {
@@ -5998,6 +6053,7 @@
   },
   {
     "name": "Rolls from opening supply crates (wintertodt)",
+    "wikiLink": null,
     "killsPerHour": 42.0,
     "requirements": [
       {
@@ -6095,6 +6151,7 @@
   },
   {
     "name": "Defeating yama (duo)",
+    "wikiLink": null,
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -6238,6 +6295,7 @@
   },
   {
     "name": "Killing zalcano (1-down teams)",
+    "wikiLink": null,
     "killsPerHour": 40.0,
     "requirements": [
       {
@@ -6291,6 +6349,7 @@
   },
   {
     "name": "Killing zulrah",
+    "wikiLink": null,
     "killsPerHour": 44.0,
     "requirements": [
       {
@@ -6418,6 +6477,7 @@
   },
   {
     "name": "Ancient chest (chambers of xeric)",
+    "wikiLink": null,
     "killsPerHour": 3.5,
     "requirements": [],
     "recommended": [
@@ -6617,6 +6677,7 @@
   },
   {
     "name": "Ancient chest (chambers of xeric challenge mode)",
+    "wikiLink": null,
     "killsPerHour": 3.0,
     "requirements": [],
     "recommended": [
@@ -6872,6 +6933,7 @@
   },
   {
     "name": "Theater of blood (4 person team)",
+    "wikiLink": null,
     "killsPerHour": 3.2,
     "requirements": [
       {
@@ -7044,6 +7106,7 @@
   },
   {
     "name": "Theater of blood hard mode (4 person team)",
+    "wikiLink": null,
     "killsPerHour": 2.7,
     "requirements": [
       {
@@ -7240,6 +7303,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (150)",
+    "wikiLink": null,
     "killsPerHour": 3.7,
     "requirements": [
       {
@@ -7452,6 +7516,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (300)",
+    "wikiLink": null,
     "killsPerHour": 3.0,
     "requirements": [
       {
@@ -7668,6 +7733,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (500)",
+    "wikiLink": null,
     "killsPerHour": 1.7,
     "requirements": [
       {
@@ -7884,6 +7950,7 @@
   },
   {
     "name": "Completing tombs of amascut challenges",
+    "wikiLink": null,
     "killsPerHour": 1.0,
     "requirements": [
       {
@@ -8012,6 +8079,7 @@
   },
   {
     "name": "Opening beginner caskets",
+    "wikiLink": null,
     "killsPerHour": 50.0,
     "requirements": [],
     "recommended": [
@@ -8193,6 +8261,7 @@
   },
   {
     "name": "Opening easy caskets",
+    "wikiLink": null,
     "killsPerHour": 45.0,
     "requirements": [
       {
@@ -9688,6 +9757,7 @@
   },
   {
     "name": "Opening medium caskets",
+    "wikiLink": null,
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -11166,6 +11236,7 @@
   },
   {
     "name": "Opening hard caskets",
+    "wikiLink": null,
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -13011,6 +13082,7 @@
   },
   {
     "name": "Opening elite caskets",
+    "wikiLink": null,
     "killsPerHour": 1.66,
     "requirements": [
       {
@@ -14430,6 +14502,7 @@
   },
   {
     "name": "Opening master caskets",
+    "wikiLink": null,
     "killsPerHour": 1.5,
     "requirements": [
       {
@@ -15778,6 +15851,7 @@
   },
   {
     "name": "Barbarian assault high gambles (or 500 points)",
+    "wikiLink": null,
     "killsPerHour": 3.1,
     "requirements": [],
     "recommended": [
@@ -15913,6 +15987,7 @@
   },
   {
     "name": "Completing tempor tantrum barracuda trials",
+    "wikiLink": null,
     "killsPerHour": 17.5,
     "requirements": [
       {
@@ -15981,6 +16056,7 @@
   },
   {
     "name": "Completing jubbly jive barracuda trials",
+    "wikiLink": null,
     "killsPerHour": 16.0,
     "requirements": [
       {
@@ -16049,6 +16125,7 @@
   },
   {
     "name": "Completing gwenith glide barracuda trials",
+    "wikiLink": null,
     "killsPerHour": 12.0,
     "requirements": [
       {
@@ -16117,6 +16194,7 @@
   },
   {
     "name": "Getting brimhaven vouchers",
+    "wikiLink": null,
     "killsPerHour": 66.0,
     "requirements": [],
     "recommended": [
@@ -16166,6 +16244,7 @@
   },
   {
     "name": "Getting castle wars tickets",
+    "wikiLink": null,
     "killsPerHour": 12.7,
     "requirements": [],
     "recommended": [],
@@ -16489,6 +16568,7 @@
   },
   {
     "name": "Completing rounds of fishing trawler",
+    "wikiLink": null,
     "killsPerHour": 8.0,
     "requirements": [
       {
@@ -16538,6 +16618,7 @@
   },
   {
     "name": "Earning giants' foundry reputation",
+    "wikiLink": null,
     "killsPerHour": 2000.0,
     "requirements": [
       {
@@ -16632,6 +16713,7 @@
   },
   {
     "name": "Gnome restaurant deliveries (seed pods)",
+    "wikiLink": null,
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -16699,6 +16781,7 @@
   },
   {
     "name": "Gnome restaurant deliveries (scarfs and goggles)",
+    "wikiLink": null,
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -16766,6 +16849,7 @@
   },
   {
     "name": "Pulling from the reward guardian (guardians of the rift)",
+    "wikiLink": null,
     "killsPerHour": 33.0,
     "requirements": [
       {
@@ -16918,6 +17002,7 @@
   },
   {
     "name": "Looting hallowed marks (hallowed sepulchre)",
+    "wikiLink": null,
     "killsPerHour": 160.0,
     "requirements": [
       {
@@ -17059,6 +17144,7 @@
   },
   {
     "name": "Looting the grand hallowed coffin (hallowed sepulchre)",
+    "wikiLink": null,
     "killsPerHour": 8.5,
     "requirements": [
       {
@@ -17088,6 +17174,7 @@
   },
   {
     "name": "Earning last man standing points",
+    "wikiLink": null,
     "killsPerHour": 28.0,
     "requirements": [],
     "recommended": [],
@@ -17307,6 +17394,7 @@
   },
   {
     "name": "Surviving the round (last man standing)",
+    "wikiLink": null,
     "killsPerHour": 4.0,
     "requirements": [],
     "recommended": [],
@@ -17366,6 +17454,7 @@
   },
   {
     "name": "Wasting hours at the magic training arena",
+    "wikiLink": null,
     "killsPerHour": 1.0,
     "requirements": [
       {
@@ -17471,6 +17560,7 @@
   },
   {
     "name": "Earning mahogany homes carpenter points",
+    "wikiLink": null,
     "killsPerHour": 285.0,
     "requirements": [],
     "recommended": [
@@ -17552,6 +17642,7 @@
   },
   {
     "name": "Collecting resin (mastering mixology)",
+    "wikiLink": null,
     "killsPerHour": 12000.0,
     "requirements": [
       {
@@ -17635,6 +17726,7 @@
   },
   {
     "name": "Getting commendation points (pest control)",
+    "wikiLink": null,
     "killsPerHour": 270.0,
     "requirements": [
       {
@@ -17736,6 +17828,7 @@
   },
   {
     "name": "Stealing from the rogues' den maze",
+    "wikiLink": null,
     "killsPerHour": 15.0,
     "requirements": [
       {
@@ -17798,6 +17891,7 @@
   },
   {
     "name": "Opening chests with shades of mort'ton keys",
+    "wikiLink": null,
     "killsPerHour": 175.0,
     "requirements": [
       {
@@ -17931,6 +18025,7 @@
   },
   {
     "name": "Earning soul wars zeal",
+    "wikiLink": null,
     "killsPerHour": 375.0,
     "requirements": [
       {
@@ -17971,6 +18066,7 @@
   },
   {
     "name": "Finding lumberjack zombie events (temple trekking)",
+    "wikiLink": null,
     "killsPerHour": 10.0,
     "requirements": [
       {
@@ -18024,6 +18120,7 @@
   },
   {
     "name": "Earning tithe farm reward points",
+    "wikiLink": null,
     "killsPerHour": 95.0,
     "requirements": [
       {
@@ -18097,6 +18194,7 @@
   },
   {
     "name": "Earning pieces of eight (trouble brewing)",
+    "wikiLink": null,
     "killsPerHour": 1200.0,
     "requirements": [
       {
@@ -18358,6 +18456,7 @@
   },
   {
     "name": "Rummaging vale offerings (vale totems)",
+    "wikiLink": null,
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -18411,6 +18510,7 @@
   },
   {
     "name": "Earning volcanic mine reward points",
+    "wikiLink": null,
     "killsPerHour": 10000.0,
     "requirements": [
       {
@@ -18460,6 +18560,7 @@
   },
   {
     "name": "Collecting pearls while aerial fishing",
+    "wikiLink": null,
     "killsPerHour": 32.0,
     "requirements": [
       {
@@ -18554,6 +18655,7 @@
   },
   {
     "name": "Opening barronite deposits in camdozaal",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -18631,6 +18733,7 @@
   },
   {
     "name": "Fishing in camdozaal",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -18660,6 +18763,7 @@
   },
   {
     "name": "Killing chaos golems in camdozaal",
+    "wikiLink": null,
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -18684,6 +18788,7 @@
   },
   {
     "name": "Killing earth warriors (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -18714,6 +18819,7 @@
   },
   {
     "name": "Killing ghouls (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -18743,6 +18849,7 @@
   },
   {
     "name": "Killing giants (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 900.0,
     "requirements": [],
     "recommended": [
@@ -18767,6 +18874,7 @@
   },
   {
     "name": "Killing goblins (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 1600.0,
     "requirements": [],
     "recommended": [
@@ -18791,6 +18899,7 @@
   },
   {
     "name": "Killing hobgoblins (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [],
     "recommended": [
@@ -18815,6 +18924,7 @@
   },
   {
     "name": "Killing imps (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 650.0,
     "requirements": [],
     "recommended": [
@@ -18840,6 +18950,7 @@
   },
   {
     "name": "Killing jogres (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 650.0,
     "requirements": [],
     "recommended": [
@@ -18864,6 +18975,7 @@
   },
   {
     "name": "Killing lesser demons (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [],
     "recommended": [
@@ -18888,6 +19000,7 @@
   },
   {
     "name": "Killing skeletons (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 1300.0,
     "requirements": [],
     "recommended": [
@@ -18912,6 +19025,7 @@
   },
   {
     "name": "Killing zombies (champion's challenge)",
+    "wikiLink": null,
     "killsPerHour": 1000.0,
     "requirements": [],
     "recommended": [
@@ -18936,6 +19050,7 @@
   },
   {
     "name": "Killing elder chaos druids",
+    "wikiLink": null,
     "killsPerHour": 480.0,
     "requirements": [
       {
@@ -18993,6 +19108,7 @@
   },
   {
     "name": "Killing chompies",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -19185,6 +19301,7 @@
   },
   {
     "name": "Collecting termites (colossal wyrm agility)",
+    "wikiLink": null,
     "killsPerHour": 235.0,
     "requirements": [
       {
@@ -19232,6 +19349,7 @@
   },
   {
     "name": "Killing frogeels (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19264,6 +19382,7 @@
   },
   {
     "name": "Killing unicows (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19296,6 +19415,7 @@
   },
   {
     "name": "Killing spidines (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19328,6 +19448,7 @@
   },
   {
     "name": "Killing swordchicks (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19360,6 +19481,7 @@
   },
   {
     "name": "Killing jubsters (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19392,6 +19514,7 @@
   },
   {
     "name": "Killing newtroosts (creature creation)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19424,6 +19547,7 @@
   },
   {
     "name": "Killing cyclopes at the warriors' guild",
+    "wikiLink": null,
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -19548,6 +19672,7 @@
   },
   {
     "name": "Collecting anima-infused bark (forestry)",
+    "wikiLink": null,
     "killsPerHour": 1800.0,
     "requirements": [
       {
@@ -19771,6 +19896,7 @@
   },
   {
     "name": "Doing entling events for god eggs",
+    "wikiLink": null,
     "killsPerHour": 7.0,
     "requirements": [
       {
@@ -19826,6 +19952,7 @@
   },
   {
     "name": "Spending 100 numulite at the fossil island notes chest",
+    "wikiLink": null,
     "killsPerHour": 1000.0,
     "requirements": [
       {
@@ -19922,6 +20049,7 @@
   },
   {
     "name": "Killing demonic gorillas",
+    "wikiLink": null,
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -20002,6 +20130,7 @@
   },
   {
     "name": "Opening hunters' loot sacks (hunters' rumours)",
+    "wikiLink": null,
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -20067,6 +20196,7 @@
   },
   {
     "name": "Exploring sailing islands",
+    "wikiLink": null,
     "killsPerHour": 12.0,
     "requirements": [
       {
@@ -20280,6 +20410,7 @@
   },
   {
     "name": "Running laps of monkey agility",
+    "wikiLink": null,
     "killsPerHour": 95.0,
     "requirements": [
       {
@@ -20345,6 +20476,7 @@
   },
   {
     "name": "Collecting gold nuggets at the motherlode mine",
+    "wikiLink": null,
     "killsPerHour": 10.0,
     "requirements": [
       {
@@ -20410,6 +20542,7 @@
   },
   {
     "name": "Looting skeletons in the ancient cavern (my notes / ancient page)",
+    "wikiLink": null,
     "killsPerHour": 360.0,
     "requirements": [
       {
@@ -20640,6 +20773,7 @@
   },
   {
     "name": "Giving items to the clam (ocean encounters)",
+    "wikiLink": null,
     "killsPerHour": 0.5,
     "requirements": [
       {
@@ -20744,6 +20878,7 @@
   },
   {
     "name": "Waiting for random events",
+    "wikiLink": null,
     "killsPerHour": 0.66,
     "requirements": [],
     "recommended": [],
@@ -20939,6 +21074,7 @@
   },
   {
     "name": "Killing revenants (demon cyclops quads, skulled, off task)",
+    "wikiLink": null,
     "killsPerHour": 260.0,
     "requirements": [],
     "recommended": [
@@ -21083,6 +21219,7 @@
   },
   {
     "name": "Killing revenants (demon cyclops quads, skulled, skipping for task)",
+    "wikiLink": null,
     "killsPerHour": 107.0,
     "requirements": [],
     "recommended": [
@@ -21227,6 +21364,7 @@
   },
   {
     "name": "Collecting marks of grace (rooftop agility)",
+    "wikiLink": null,
     "killsPerHour": 25.0,
     "requirements": [],
     "recommended": [],
@@ -21294,6 +21432,7 @@
   },
   {
     "name": "Killing frost dragons",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -21364,6 +21503,7 @@
   },
   {
     "name": "Killing orcas (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 90.0,
     "requirements": [],
     "recommended": [
@@ -21413,6 +21553,7 @@
   },
   {
     "name": "Killing albatross (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 190.0,
     "requirements": [],
     "recommended": [
@@ -21438,6 +21579,7 @@
   },
   {
     "name": "Killing narwhal (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 165.0,
     "requirements": [],
     "recommended": [
@@ -21487,6 +21629,7 @@
   },
   {
     "name": "Killing stingray (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [],
     "recommended": [
@@ -21512,6 +21655,7 @@
   },
   {
     "name": "Killing great white shark (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 180.0,
     "requirements": [],
     "recommended": [
@@ -21569,6 +21713,7 @@
   },
   {
     "name": "Killing vampyre kraken (boat combat)",
+    "wikiLink": null,
     "killsPerHour": 110.0,
     "requirements": [],
     "recommended": [
@@ -21634,6 +21779,7 @@
   },
   {
     "name": "Sorting through small salvage",
+    "wikiLink": null,
     "killsPerHour": 920.0,
     "requirements": [
       {
@@ -21675,6 +21821,7 @@
   },
   {
     "name": "Sorting through fishy salvage",
+    "wikiLink": null,
     "killsPerHour": 900.0,
     "requirements": [
       {
@@ -21716,6 +21863,7 @@
   },
   {
     "name": "Sorting through barracuda salvage",
+    "wikiLink": null,
     "killsPerHour": 840.0,
     "requirements": [
       {
@@ -21757,6 +21905,7 @@
   },
   {
     "name": "Sorting through large salvage",
+    "wikiLink": null,
     "killsPerHour": 780.0,
     "requirements": [
       {
@@ -21790,6 +21939,7 @@
   },
   {
     "name": "Sorting through plundered salvage",
+    "wikiLink": null,
     "killsPerHour": 820.0,
     "requirements": [
       {
@@ -21831,6 +21981,7 @@
   },
   {
     "name": "Sorting through martial salvage",
+    "wikiLink": null,
     "killsPerHour": 700.0,
     "requirements": [
       {
@@ -21880,6 +22031,7 @@
   },
   {
     "name": "Sorting through fremennik salvage",
+    "wikiLink": null,
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -21913,6 +22065,7 @@
   },
   {
     "name": "Sorting through opulent salvage",
+    "wikiLink": null,
     "killsPerHour": 550.0,
     "requirements": [
       {
@@ -21986,6 +22139,7 @@
   },
   {
     "name": "Killing soldiers in the shayzien combat ring",
+    "wikiLink": null,
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -22203,6 +22357,7 @@
   },
   {
     "name": "Mining stardust from shooting stars",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22236,6 +22391,7 @@
   },
   {
     "name": "Fishing (2-tick tuna and swordfish)",
+    "wikiLink": null,
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -22269,6 +22425,7 @@
   },
   {
     "name": "Mining (gemstone rocks)",
+    "wikiLink": null,
     "killsPerHour": 1770.0,
     "requirements": [],
     "recommended": [],
@@ -22288,6 +22445,7 @@
   },
   {
     "name": "Woodcutting (1.5-tick teaks)",
+    "wikiLink": null,
     "killsPerHour": 2350.0,
     "requirements": [
       {
@@ -22313,6 +22471,7 @@
   },
   {
     "name": "Hunting chinchompas (black chinchompas)",
+    "wikiLink": null,
     "killsPerHour": 850.0,
     "requirements": [
       {
@@ -22338,6 +22497,7 @@
   },
   {
     "name": "Agility (penguin course)",
+    "wikiLink": null,
     "killsPerHour": 55.0,
     "requirements": [
       {
@@ -22363,6 +22523,7 @@
   },
   {
     "name": "Farming (fruit trees)",
+    "wikiLink": null,
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -22396,6 +22557,7 @@
   },
   {
     "name": "Thieving (seed stalls)",
+    "wikiLink": null,
     "killsPerHour": 1915.0,
     "requirements": [
       {
@@ -22421,6 +22583,7 @@
   },
   {
     "name": "Runecrafting (fire runes)",
+    "wikiLink": null,
     "killsPerHour": 26400.0,
     "requirements": [
       {
@@ -22446,6 +22609,7 @@
   },
   {
     "name": "Sailing (port tasks)",
+    "wikiLink": null,
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -22478,6 +22642,7 @@
   },
   {
     "name": "Killing crawling hands",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22528,6 +22693,7 @@
   },
   {
     "name": "Killing cockatrice",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22599,6 +22765,7 @@
   },
   {
     "name": "Killing basilisks",
+    "wikiLink": null,
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -22662,6 +22829,7 @@
   },
   {
     "name": "Killing basilisk knights (on task)",
+    "wikiLink": null,
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -22816,6 +22984,7 @@
   },
   {
     "name": "Killing kurask",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -22911,6 +23080,7 @@
   },
   {
     "name": "Killing abyssal demons (on task)",
+    "wikiLink": null,
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -23037,6 +23207,7 @@
   },
   {
     "name": "Killing dust devils (on task)",
+    "wikiLink": null,
     "killsPerHour": 650.0,
     "requirements": [
       {
@@ -23147,6 +23318,7 @@
   },
   {
     "name": "Killing waterfiends",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -23192,6 +23364,7 @@
   },
   {
     "name": "Killing gargoyles",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -23278,6 +23451,7 @@
   },
   {
     "name": "Killing mogres",
+    "wikiLink": null,
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -23340,6 +23514,7 @@
   },
   {
     "name": "Killing brine rats",
+    "wikiLink": null,
     "killsPerHour": 675.0,
     "requirements": [
       {
@@ -23390,6 +23565,7 @@
   },
   {
     "name": "Killing turoth",
+    "wikiLink": null,
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -23448,6 +23624,7 @@
   },
   {
     "name": "Killing cave horrors",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -23534,6 +23711,7 @@
   },
   {
     "name": "Killing fossil island wyverns",
+    "wikiLink": null,
     "killsPerHour": 145.0,
     "requirements": [
       {
@@ -23588,6 +23766,7 @@
   },
   {
     "name": "Killing ancient wyverns",
+    "wikiLink": null,
     "killsPerHour": 75.0,
     "requirements": [
       {
@@ -23693,6 +23872,7 @@
   },
   {
     "name": "Killing skeletal wyverns",
+    "wikiLink": null,
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -23781,6 +23961,7 @@
   },
   {
     "name": "Killing terror dogs",
+    "wikiLink": null,
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -23825,6 +24006,7 @@
   },
   {
     "name": "Killing cave crawlers",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -23871,6 +24053,7 @@
   },
   {
     "name": "Killing cave slimes",
+    "wikiLink": null,
     "killsPerHour": 600.0,
     "requirements": [
       {
@@ -23917,6 +24100,7 @@
   },
   {
     "name": "Killing pyrefiends",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -23967,6 +24151,7 @@
   },
   {
     "name": "Killing harpie bug swarms",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -24017,6 +24202,7 @@
   },
   {
     "name": "Killing bloodvelds",
+    "wikiLink": null,
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -24067,6 +24253,7 @@
   },
   {
     "name": "Killing warped jellies",
+    "wikiLink": null,
     "killsPerHour": 650.0,
     "requirements": [
       {
@@ -24149,6 +24336,7 @@
   },
   {
     "name": "Killing greater nechryael (on task)",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -24263,6 +24451,7 @@
   },
   {
     "name": "Killing spiritual mages (non-zaros)",
+    "wikiLink": null,
     "killsPerHour": 180.0,
     "requirements": [
       {
@@ -24343,6 +24532,7 @@
   },
   {
     "name": "Killing spiritual mages (zaros)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -24467,6 +24657,7 @@
   },
   {
     "name": "Killing cave kraken (non-boss, on task)",
+    "wikiLink": null,
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -24530,6 +24721,7 @@
   },
   {
     "name": "Killing dark beasts",
+    "wikiLink": null,
     "killsPerHour": 190.0,
     "requirements": [
       {
@@ -24616,6 +24808,7 @@
   },
   {
     "name": "Killing smoke devils (on task)",
+    "wikiLink": null,
     "killsPerHour": 700.0,
     "requirements": [
       {
@@ -24722,6 +24915,7 @@
   },
   {
     "name": "Killing wyrms (on task)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -24844,6 +25038,7 @@
   },
   {
     "name": "Opening the brimstone chest",
+    "wikiLink": null,
     "killsPerHour": 4.0,
     "requirements": [
       {
@@ -24908,6 +25103,7 @@
   },
   {
     "name": "Killing drakes (on task)",
+    "wikiLink": null,
     "killsPerHour": 155.0,
     "requirements": [
       {
@@ -25034,6 +25230,7 @@
   },
   {
     "name": "Killing sulphur lizards",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -25080,6 +25277,7 @@
   },
   {
     "name": "Killing infernal mages",
+    "wikiLink": null,
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -25121,6 +25319,7 @@
   },
   {
     "name": "Killing banshees",
+    "wikiLink": null,
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -25170,6 +25369,7 @@
   },
   {
     "name": "Killing aberrant spectres",
+    "wikiLink": null,
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -25224,6 +25424,7 @@
   },
   {
     "name": "Killing aquanites (on task)",
+    "wikiLink": null,
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -25344,6 +25545,7 @@
   },
   {
     "name": "Opening larran's big chest",
+    "wikiLink": null,
     "killsPerHour": 1500.0,
     "requirements": [],
     "recommended": [
@@ -25385,6 +25587,7 @@
   },
   {
     "name": "Pickpocketing from darkmeyer vyres",
+    "wikiLink": null,
     "killsPerHour": 540.0,
     "requirements": [
       {
@@ -25434,6 +25637,7 @@
   },
   {
     "name": "Killing vyrewatch sentinels",
+    "wikiLink": null,
     "killsPerHour": 160.0,
     "requirements": [
       {
@@ -25509,6 +25713,7 @@
   },
   {
     "name": "Killing warped terrorbirds",
+    "wikiLink": null,
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -25547,6 +25752,7 @@
   },
   {
     "name": "Killing sulphur naguas",
+    "wikiLink": null,
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -25581,6 +25787,7 @@
   },
   {
     "name": "Looting zombie pirate's lockers",
+    "wikiLink": null,
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -25624,6 +25831,7 @@
   },
   {
     "name": "Killing araxytes (level 146, on task)",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -25706,6 +25914,7 @@
   },
   {
     "name": "Killing earthen naguas",
+    "wikiLink": null,
     "killsPerHour": 270.0,
     "requirements": [
       {
@@ -25760,6 +25969,7 @@
   },
   {
     "name": "Killing elder custodian stalkers",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -25854,6 +26064,7 @@
   },
   {
     "name": "Killing gryphons (on task)",
+    "wikiLink": null,
     "killsPerHour": 600.0,
     "requirements": [
       {
@@ -25943,6 +26154,7 @@
   },
   {
     "name": "Killing tormented demons",
+    "wikiLink": null,
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -26031,6 +26243,7 @@
   },
   {
     "name": "Killing bulk tzhaar",
+    "wikiLink": null,
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -26133,6 +26346,7 @@
   },
   {
     "name": "Killing tzhaar-mej",
+    "wikiLink": null,
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -26170,6 +26384,7 @@
   },
   {
     "name": "Plucking herbiboar",
+    "wikiLink": null,
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -26206,6 +26421,7 @@
   },
   {
     "name": "Killing lizardmen",
+    "wikiLink": null,
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -26235,6 +26451,7 @@
   },
   {
     "name": "Killing lizardman shamans",
+    "wikiLink": null,
     "killsPerHour": 125.0,
     "requirements": [
       {
@@ -26309,6 +26526,7 @@
   },
   {
     "name": "Fishing shark",
+    "wikiLink": null,
     "killsPerHour": 960.0,
     "requirements": [
       {
@@ -26334,6 +26552,7 @@
   },
   {
     "name": "Fishing bass",
+    "wikiLink": null,
     "killsPerHour": 360.0,
     "requirements": [
       {
@@ -26359,6 +26578,7 @@
   },
   {
     "name": "Fishing giant krill (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26416,6 +26636,7 @@
   },
   {
     "name": "Fishing haddock (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26473,6 +26694,7 @@
   },
   {
     "name": "Fishing yellowfin (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26530,6 +26752,7 @@
   },
   {
     "name": "Fishing halibut (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26587,6 +26810,7 @@
   },
   {
     "name": "Fishing bluefin (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26644,6 +26868,7 @@
   },
   {
     "name": "Fishing marlin (deep sea trawling)",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26696,6 +26921,7 @@
   },
   {
     "name": "Killing in the wilderness god wars dungeon (barrage)",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -26721,6 +26947,7 @@
   },
   {
     "name": "Looting grand gold chests (pyramid plunder)",
+    "wikiLink": null,
     "killsPerHour": 192.0,
     "requirements": [
       {
@@ -26752,6 +26979,7 @@
   },
   {
     "name": "Killing mithril dragons",
+    "wikiLink": null,
     "killsPerHour": 84.0,
     "requirements": [
       {
@@ -27058,6 +27286,7 @@
   },
   {
     "name": "Killing adamant dragons",
+    "wikiLink": null,
     "killsPerHour": 85.0,
     "requirements": [
       {
@@ -27145,6 +27374,7 @@
   },
   {
     "name": "Killing rune dragons",
+    "wikiLink": null,
     "killsPerHour": 75.0,
     "requirements": [
       {
@@ -27232,6 +27462,7 @@
   },
   {
     "name": "Charging glories at the fountain of rune",
+    "wikiLink": null,
     "killsPerHour": 1700.0,
     "requirements": [
       {
@@ -27339,6 +27570,7 @@
   },
   {
     "name": "Killing ogress shamans",
+    "wikiLink": null,
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -27379,6 +27611,7 @@
   },
   {
     "name": "Collecting unidentified minerals at the mining guild",
+    "wikiLink": null,
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -27420,6 +27653,7 @@
   },
   {
     "name": "Killing minotaurs (stronghold of security)",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [],
     "recommended": [],
@@ -27439,6 +27673,7 @@
   },
   {
     "name": "Killing flesh crawlers (stronghold of security)",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -27463,6 +27698,7 @@
   },
   {
     "name": "Killing catablepons (stronghold of security)",
+    "wikiLink": null,
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -27487,6 +27723,7 @@
   },
   {
     "name": "Killing ankou (stronghold of security)",
+    "wikiLink": null,
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -27516,6 +27753,7 @@
   },
   {
     "name": "Killing moss giants",
+    "wikiLink": null,
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -27588,6 +27826,7 @@
   },
   {
     "name": "Killing hill giants",
+    "wikiLink": null,
     "killsPerHour": 900.0,
     "requirements": [
       {
@@ -27665,6 +27904,7 @@
   },
   {
     "name": "Killing underwater crabs (level 23)",
+    "wikiLink": null,
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -27706,6 +27946,7 @@
   },
   {
     "name": "Killing undead druids",
+    "wikiLink": null,
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -27768,6 +28009,7 @@
   },
   {
     "name": "Looting crystal implings",
+    "wikiLink": null,
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -27797,6 +28039,7 @@
   },
   {
     "name": "Killing the prifddinas rabbit",
+    "wikiLink": null,
     "killsPerHour": 7.0,
     "requirements": [
       {
@@ -27821,6 +28064,7 @@
   },
   {
     "name": "Pickpocketing from prifddinas elves",
+    "wikiLink": null,
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -27850,6 +28094,7 @@
   },
   {
     "name": "Killing elves (prifddinas)",
+    "wikiLink": null,
     "killsPerHour": 540.0,
     "requirements": [
       {
@@ -27874,6 +28119,7 @@
   },
   {
     "name": "Opening the elven crystal chest",
+    "wikiLink": null,
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -27946,6 +28192,7 @@
   },
   {
     "name": "Collecting mermaid tears (fossil island underwater)",
+    "wikiLink": null,
     "killsPerHour": 230.0,
     "requirements": [
       {
@@ -27970,6 +28217,7 @@
   },
   {
     "name": "Killing armoured zombies (zemouregal)",
+    "wikiLink": null,
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -28026,6 +28274,7 @@
   },
   {
     "name": "Opening the moon chest",
+    "wikiLink": null,
     "killsPerHour": 0.4,
     "requirements": [],
     "recommended": [
@@ -28117,6 +28366,7 @@
   },
   {
     "name": "Cutting squid",
+    "wikiLink": null,
     "killsPerHour": 1800.0,
     "requirements": [
       {

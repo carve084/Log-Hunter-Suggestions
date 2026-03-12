@@ -89,6 +89,7 @@ def parse_exp(exp_str):
 
 
 # Main processing function that reads, combines, and structures the activity data.
+# Modified section in process_data (READ RATES)
 def process_data(rates_reader, map_reader, kph_col, exp_col):
     activities = {}
 
@@ -96,13 +97,16 @@ def process_data(rates_reader, map_reader, kph_col, exp_col):
     for row in rates_reader:
         name = row['Activity name'].strip()
         kph = clean_number(row.get(kph_col, '0'))
+        # New: Extract the Wiki link from the spreadsheet
+        wiki_link = row.get('Wiki Link', '').strip()
 
         if name and kph > 0:
             activities[name] = {
                 "name": name,
+                "wikiLink": wiki_link if wiki_link else None, # New field
                 "killsPerHour": kph,
                 "requirements": parse_requirements(row.get('Requirements', '')),
-                "recommended": parse_requirements(row.get('Recommended', '')), # ADDED THIS LINE
+                "recommended": parse_requirements(row.get('Recommended', '')),
                 "experienceRates": parse_exp(row.get(exp_col, '')),
                 "rewards":[],
                 "difficulty": "Unknown",
