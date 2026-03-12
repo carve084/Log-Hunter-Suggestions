@@ -11,7 +11,6 @@ import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
-import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -41,8 +40,6 @@ import net.runelite.client.util.LinkBrowser;
  */
 public class LogHunterPanel extends PluginPanel
 {
-	// Main containers
-	private final JScrollPane scrollPane;
 	private final JPanel mainContainer = new JPanel();
 
 	// Top Result UI
@@ -54,13 +51,9 @@ public class LogHunterPanel extends PluginPanel
 	private final JLabel slotsLabel = new JLabel();
 	private final JLabel percentLabel = new JLabel();
 	private final JLabel difficultyLabel = new JLabel();
-	private final JButton topSkipButton = new JButton("Skip Activity");
 
-	private JLabel slotsTitleLabel;
-	private JLabel percentTitleLabel;
-
-	// Assets
-	private final ImageIcon wikiIcon; // NEW: Wiki Icon
+	private final JLabel slotsTitleLabel;
+	private final JLabel percentTitleLabel;
 
 	// Runner-up UI
 	private final JPanel runnerUpPanel = new JPanel();
@@ -106,9 +99,6 @@ public class LogHunterPanel extends PluginPanel
 	// UI State Tracker for Memory Leak Prevention
 	private String currentTopActivityName = null;
 
-	// GridBag Constraints for the main container
-	private final GridBagConstraints mainGc;
-
 	/**
 	 * Constructs the UI panel and all of its sub-components.
 	 *
@@ -134,8 +124,8 @@ public class LogHunterPanel extends PluginPanel
 
 		// --- Load Icon and Configure Wiki Button ---
 		final BufferedImage iconImg = ImageUtil.loadImageResource(getClass(), "/wiki_icon.png");
-		this.wikiIcon = new ImageIcon(iconImg);
-
+		// Assets
+		ImageIcon wikiIcon = new ImageIcon(iconImg);
 		wikiButton.setIcon(wikiIcon);
 		wikiButton.setText("Wiki");
 		wikiButton.setToolTipText("Open OSRS Wiki Strategy Guide");
@@ -146,14 +136,16 @@ public class LogHunterPanel extends PluginPanel
 		mainContainer.setLayout(new GridBagLayout());
 		mainContainer.setBorder(new EmptyBorder(10, 5, 10, 5));
 
-		mainGc = new GridBagConstraints();
+		// GridBag Constraints for the main container
+		GridBagConstraints mainGc = new GridBagConstraints();
 		mainGc.fill = GridBagConstraints.HORIZONTAL;
 		mainGc.weightx = 1.0;
 		mainGc.gridx = 0;
 		mainGc.gridy = 0;
 		mainGc.insets = new Insets(0, 0, 10, 0);
 
-		scrollPane = new JScrollPane(mainContainer);
+		// Main containers
+		JScrollPane scrollPane = new JScrollPane(mainContainer);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 		scrollPane.getVerticalScrollBar().setUnitIncrement(16);
@@ -202,6 +194,7 @@ public class LogHunterPanel extends PluginPanel
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.insets = new Insets(10, 2, 2, 2);
 
+		JButton topSkipButton = new JButton("Skip Activity");
 		topSkipButton.setFocusable(false);
 		topSkipButton.addActionListener(e -> {
 			if (currentTopActivityName != null) {
@@ -268,7 +261,9 @@ public class LogHunterPanel extends PluginPanel
 				int id = Integer.parseInt(itemIdField.getText().trim());
 				onToggleItem.accept(id);
 				itemIdField.setText("");
-			} catch (NumberFormatException ex) {}
+			} catch (NumberFormatException ex) {
+				// Ignore invalid text input gracefully
+			}
 		});
 		togglePanel.add(toggleButton, BorderLayout.EAST);
 		controlsPanel.add(togglePanel);
@@ -444,7 +439,7 @@ public class LogHunterPanel extends PluginPanel
 					JPanel row = new JPanel(new BorderLayout(5, 0));
 					row.setBorder(new EmptyBorder(2, 2, 2, 2));
 
-					String truncatedName = truncate(skippedName, 23);
+					String truncatedName = truncate(skippedName);
 					JLabel nameLabel = new JLabel(truncatedName);
 					nameLabel.setToolTipText(skippedName);
 					nameLabel.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
@@ -608,7 +603,7 @@ public class LogHunterPanel extends PluginPanel
 		panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
 
 		String fullName = suggestion.getActivity().getName();
-		String truncatedName = truncate(fullName, 23);
+		String truncatedName = truncate(fullName);
 
 		JLabel nameLabel = new JLabel(rank + ". " + truncatedName);
 		nameLabel.setToolTipText("Activity: " + fullName + " | Target: " + suggestion.getFastestRewardName());
@@ -639,11 +634,11 @@ public class LogHunterPanel extends PluginPanel
 	/**
 	 * Truncates a string to a maximum length, adding an ellipsis if truncated.
 	 * @param text The string to truncate.
-	 * @param maxLength The maximum allowed length.
 	 * @return The potentially truncated string.
 	 */
-	private String truncate(String text, int maxLength)
+	private String truncate(String text)
 	{
+		int maxLength = 23;
 		if (text == null || text.length() <= maxLength) return text;
 		return text.substring(0, maxLength) + "…";
 	}
