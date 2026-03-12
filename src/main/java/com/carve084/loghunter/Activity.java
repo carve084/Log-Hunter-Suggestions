@@ -126,26 +126,26 @@ public class Activity
                 // Only calculate TIME if the user wants Log Suggestions
                 if (config.suggestCollectionLog())
                 {
-                    if (itemReward.isRequiresPrevious() && !previousOwned) { /* Skip */ }
-                    else
-                    {
-                        double expectedAttempts = itemReward.getAttempts();
+					// If it DOESN'T require the previous item, OR we DO own the previous item, do the math!
+					if (!itemReward.isRequiresPrevious() || previousOwned)
+					{
+						double expectedAttempts = itemReward.getAttempts();
 
-                        if (expectedAttempts <= 0) continue;
+						if (expectedAttempts <= 0) continue;
 
-                        if (!itemReward.isExact()) {
-                            probNoRNGDrop *= (1.0 - (1.0 / expectedAttempts));
-                        } else if (expectedAttempts < minExactAttempts) {
-                            minExactAttempts = expectedAttempts;
-                        }
+						if (!itemReward.isExact()) {
+							probNoRNGDrop *= (1.0 - (1.0 / expectedAttempts));
+						} else if (expectedAttempts < minExactAttempts) {
+							minExactAttempts = expectedAttempts;
+						}
 
-                        double hoursForItem = expectedAttempts / killsPerHour;
-                        if (hoursForItem < fastestRewardHours)
-                        {
-                            fastestRewardHours = hoursForItem;
-                            fastestReward = itemReward;
-                        }
-                    }
+						double hoursForItem = expectedAttempts / killsPerHour;
+						if (hoursForItem < fastestRewardHours)
+						{
+							fastestRewardHours = hoursForItem;
+							fastestReward = itemReward;
+						}
+					}
                 }
             }
             previousOwned = isOwned;
