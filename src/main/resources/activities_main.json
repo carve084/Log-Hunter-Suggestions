@@ -59,11 +59,7 @@
         "level": 90
       }
     ],
-    "experienceRates": {
-      "SLAYER": 25000.0,
-      "STRENGTH": 70000.0,
-      "HITPOINTS": 23000.0
-    },
+    "experienceRates": {},
     "rewards": [
       {
         "type": "ITEM",
@@ -5270,7 +5266,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 62000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -5481,7 +5479,7 @@
   },
   {
     "name": "Killing vardorvis",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Vardorvis/Strategies",
     "killsPerHour": 37.0,
     "requirements": [
       {
@@ -5603,7 +5601,7 @@
   },
   {
     "name": "Killing spindel",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Spindel/Strategies",
     "killsPerHour": 55.0,
     "requirements": [],
     "recommended": [
@@ -5704,7 +5702,7 @@
   },
   {
     "name": "Killing calvar'ion",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Calvar%27ion/Strategies",
     "killsPerHour": 55.0,
     "requirements": [],
     "recommended": [
@@ -5818,7 +5816,7 @@
   },
   {
     "name": "Killing vorkath",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Vorkath/Strategies",
     "killsPerHour": 34.0,
     "requirements": [
       {
@@ -5940,7 +5938,7 @@
   },
   {
     "name": "Killing the whisperer",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Whisperer/Strategies",
     "killsPerHour": 21.0,
     "requirements": [
       {
@@ -6053,7 +6051,7 @@
   },
   {
     "name": "Rolls from opening supply crates (wintertodt)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Wintertodt/Strategies",
     "killsPerHour": 42.0,
     "requirements": [
       {
@@ -6063,7 +6061,11 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FIREMAKING": 290000.0,
+      "WOODCUTTING": 12000.0,
+      "FLETCHING": 24000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -6151,7 +6153,7 @@
   },
   {
     "name": "Defeating yama (duo)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Yama/Strategies",
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -6295,7 +6297,7 @@
   },
   {
     "name": "Killing zalcano (1-down teams)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Zalcano/Strategies",
     "killsPerHour": 40.0,
     "requirements": [
       {
@@ -6309,7 +6311,11 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 44000.0,
+      "SMITHING": 1200.0,
+      "RUNECRAFT": 600.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -6349,7 +6355,7 @@
   },
   {
     "name": "Killing zulrah",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Zulrah/Strategies",
     "killsPerHour": 44.0,
     "requirements": [
       {
@@ -6477,7 +6483,7 @@
   },
   {
     "name": "Ancient chest (chambers of xeric)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Strategies",
     "killsPerHour": 3.5,
     "requirements": [],
     "recommended": [
@@ -6677,7 +6683,7 @@
   },
   {
     "name": "Ancient chest (chambers of xeric challenge mode)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chambers_of_Xeric/Strategies",
     "killsPerHour": 3.0,
     "requirements": [],
     "recommended": [
@@ -6933,7 +6939,7 @@
   },
   {
     "name": "Theater of blood (4 person team)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Strategies",
     "killsPerHour": 3.2,
     "requirements": [
       {
@@ -7106,7 +7112,7 @@
   },
   {
     "name": "Theater of blood hard mode (4 person team)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Theatre_of_Blood/Strategies",
     "killsPerHour": 2.7,
     "requirements": [
       {
@@ -7303,7 +7309,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (150)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies",
     "killsPerHour": 3.7,
     "requirements": [
       {
@@ -7516,7 +7522,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (300)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies",
     "killsPerHour": 3.0,
     "requirements": [
       {
@@ -7733,7 +7739,7 @@
   },
   {
     "name": "Tombs of amascut reward chests (500)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies",
     "killsPerHour": 1.7,
     "requirements": [
       {
@@ -7950,7 +7956,7 @@
   },
   {
     "name": "Completing tombs of amascut challenges",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tombs_of_Amascut/Strategies",
     "killsPerHour": 1.0,
     "requirements": [
       {
@@ -8079,7 +8085,7 @@
   },
   {
     "name": "Opening beginner caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Beginner",
     "killsPerHour": 50.0,
     "requirements": [],
     "recommended": [
@@ -8261,7 +8267,7 @@
   },
   {
     "name": "Opening easy caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Easy",
     "killsPerHour": 45.0,
     "requirements": [
       {
@@ -9757,7 +9763,7 @@
   },
   {
     "name": "Opening medium caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Medium",
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -11236,7 +11242,7 @@
   },
   {
     "name": "Opening hard caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Hard",
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -13082,7 +13088,7 @@
   },
   {
     "name": "Opening elite caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Elite",
     "killsPerHour": 1.66,
     "requirements": [
       {
@@ -14502,7 +14508,7 @@
   },
   {
     "name": "Opening master caskets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Treasure_Trails/Full_guide/Master",
     "killsPerHour": 1.5,
     "requirements": [
       {
@@ -15851,7 +15857,7 @@
   },
   {
     "name": "Barbarian assault high gambles (or 500 points)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Barbarian_Assault/Strategies",
     "killsPerHour": 3.1,
     "requirements": [],
     "recommended": [
@@ -15987,7 +15993,7 @@
   },
   {
     "name": "Completing tempor tantrum barracuda trials",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Tempor_Tantrum",
     "killsPerHour": 17.5,
     "requirements": [
       {
@@ -16008,7 +16014,9 @@
         "level": 84
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 24519.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16056,7 +16064,7 @@
   },
   {
     "name": "Completing jubbly jive barracuda trials",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Jubbly_Jive",
     "killsPerHour": 16.0,
     "requirements": [
       {
@@ -16077,7 +16085,9 @@
         "level": 84
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 88923.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16125,7 +16135,7 @@
   },
   {
     "name": "Completing gwenith glide barracuda trials",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/The_Gwenith_Glide",
     "killsPerHour": 12.0,
     "requirements": [
       {
@@ -16146,7 +16156,9 @@
         "level": 84
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 186246.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16194,7 +16206,7 @@
   },
   {
     "name": "Getting brimhaven vouchers",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Brimhaven_Agility_Arena",
     "killsPerHour": 66.0,
     "requirements": [],
     "recommended": [
@@ -16204,7 +16216,9 @@
         "level": 40
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 60000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16244,7 +16258,7 @@
   },
   {
     "name": "Getting castle wars tickets",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Castle_Wars",
     "killsPerHour": 12.7,
     "requirements": [],
     "recommended": [],
@@ -16568,7 +16582,7 @@
   },
   {
     "name": "Completing rounds of fishing trawler",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Fishing_Trawler/Strategies",
     "killsPerHour": 8.0,
     "requirements": [
       {
@@ -16618,7 +16632,7 @@
   },
   {
     "name": "Earning giants' foundry reputation",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Giants%27_Foundry/Strategies",
     "killsPerHour": 2000.0,
     "requirements": [
       {
@@ -16633,7 +16647,9 @@
         "level": 85
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "SMITHING": 200000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16713,7 +16729,7 @@
   },
   {
     "name": "Gnome restaurant deliveries (seed pods)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Gnome_Restaurant",
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -16757,7 +16773,9 @@
         "questName": "EADGARS_RUSE"
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "COOKING": 3000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16781,7 +16799,7 @@
   },
   {
     "name": "Gnome restaurant deliveries (scarfs and goggles)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Gnome_Restaurant",
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -16825,7 +16843,9 @@
         "questName": "EADGARS_RUSE"
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "COOKING": 3000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -16849,7 +16869,7 @@
   },
   {
     "name": "Pulling from the reward guardian (guardians of the rift)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Guardians_of_the_Rift/Strategies",
     "killsPerHour": 33.0,
     "requirements": [
       {
@@ -16858,7 +16878,11 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "RUNECRAFT": 71500.0,
+      "CRAFTING": 6820.0,
+      "MINING": 3520.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17002,7 +17026,7 @@
   },
   {
     "name": "Looting hallowed marks (hallowed sepulchre)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre/Strategies",
     "killsPerHour": 160.0,
     "requirements": [
       {
@@ -17016,7 +17040,12 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 61500.0,
+      "THIEVING": 8000.0,
+      "PRAYER": 2000.0,
+      "MAGIC": 2000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17144,7 +17173,7 @@
   },
   {
     "name": "Looting the grand hallowed coffin (hallowed sepulchre)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Hallowed_Sepulchre/Strategies",
     "killsPerHour": 8.5,
     "requirements": [
       {
@@ -17158,7 +17187,13 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 88060.0,
+      "THIEVING": 8400.0,
+      "PRAYER": 1400.0,
+      "MAGIC": 2100.0,
+      "CONSTRUCTION": 7350.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17174,7 +17209,7 @@
   },
   {
     "name": "Earning last man standing points",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
     "killsPerHour": 28.0,
     "requirements": [],
     "recommended": [],
@@ -17394,7 +17429,7 @@
   },
   {
     "name": "Surviving the round (last man standing)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Last_Man_Standing",
     "killsPerHour": 4.0,
     "requirements": [],
     "recommended": [],
@@ -17454,7 +17489,7 @@
   },
   {
     "name": "Wasting hours at the magic training arena",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mage_Training_Arena",
     "killsPerHour": 1.0,
     "requirements": [
       {
@@ -17464,7 +17499,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MAGIC": 57000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17560,7 +17597,7 @@
   },
   {
     "name": "Earning mahogany homes carpenter points",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mahogany_Homes",
     "killsPerHour": 285.0,
     "requirements": [],
     "recommended": [
@@ -17570,7 +17607,9 @@
         "level": 50
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "CONSTRUCTION": 270000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17642,7 +17681,7 @@
   },
   {
     "name": "Collecting resin (mastering mixology)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mastering_Mixology/Strategies",
     "killsPerHour": 12000.0,
     "requirements": [
       {
@@ -17662,7 +17701,9 @@
         "level": 81
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "HERBLORE": 100000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17726,7 +17767,7 @@
   },
   {
     "name": "Getting commendation points (pest control)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Pest_Control/Strategies",
     "killsPerHour": 270.0,
     "requirements": [
       {
@@ -17828,7 +17869,7 @@
   },
   {
     "name": "Stealing from the rogues' den maze",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Rogues%27_Den",
     "killsPerHour": 15.0,
     "requirements": [
       {
@@ -17843,7 +17884,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 22000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -17891,7 +17934,7 @@
   },
   {
     "name": "Opening chests with shades of mort'ton keys",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Shades_of_Mort%27ton_(minigame)",
     "killsPerHour": 175.0,
     "requirements": [
       {
@@ -17905,7 +17948,10 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FIREMAKING": 87500.0,
+      "PRAYER": 21088.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18025,7 +18071,7 @@
   },
   {
     "name": "Earning soul wars zeal",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Soul_Wars",
     "killsPerHour": 375.0,
     "requirements": [
       {
@@ -18066,7 +18112,7 @@
   },
   {
     "name": "Finding lumberjack zombie events (temple trekking)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Temple_Trekking",
     "killsPerHour": 10.0,
     "requirements": [
       {
@@ -18120,7 +18166,7 @@
   },
   {
     "name": "Earning tithe farm reward points",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tithe_Farm/Strategies",
     "killsPerHour": 95.0,
     "requirements": [
       {
@@ -18130,7 +18176,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FARMING": 108380.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18194,7 +18242,7 @@
   },
   {
     "name": "Earning pieces of eight (trouble brewing)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Trouble_Brewing",
     "killsPerHour": 1200.0,
     "requirements": [
       {
@@ -18456,7 +18504,7 @@
   },
   {
     "name": "Rummaging vale offerings (vale totems)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Vale_Totems/Strategies",
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -18470,7 +18518,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FLETCHING": 300000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18510,7 +18560,7 @@
   },
   {
     "name": "Earning volcanic mine reward points",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Volcanic_Mine",
     "killsPerHour": 10000.0,
     "requirements": [
       {
@@ -18520,7 +18570,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 80000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18560,7 +18612,7 @@
   },
   {
     "name": "Collecting pearls while aerial fishing",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Aerial_fishing",
     "killsPerHour": 32.0,
     "requirements": [
       {
@@ -18575,7 +18627,10 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 62000.0,
+      "HUNTER": 82000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18655,7 +18710,7 @@
   },
   {
     "name": "Opening barronite deposits in camdozaal",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ruins_of_Camdozaal",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -18669,7 +18724,10 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 10000.0,
+      "SMITHING": 4000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18733,7 +18791,7 @@
   },
   {
     "name": "Fishing in camdozaal",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ruins_of_Camdozaal",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -18747,7 +18805,11 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 7000.0,
+      "COOKING": 9100.0,
+      "PRAYER": 3200.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -18763,7 +18825,7 @@
   },
   {
     "name": "Killing chaos golems in camdozaal",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ruins_of_Camdozaal",
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -18788,7 +18850,7 @@
   },
   {
     "name": "Killing earth warriors (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Earth_warrior_champion_scroll",
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -18819,7 +18881,7 @@
   },
   {
     "name": "Killing ghouls (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Ghoul_champion_scroll",
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -18849,7 +18911,7 @@
   },
   {
     "name": "Killing giants (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Giant_champion_scroll",
     "killsPerHour": 900.0,
     "requirements": [],
     "recommended": [
@@ -18874,7 +18936,7 @@
   },
   {
     "name": "Killing goblins (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Goblin_champion_scroll",
     "killsPerHour": 1600.0,
     "requirements": [],
     "recommended": [
@@ -18899,7 +18961,7 @@
   },
   {
     "name": "Killing hobgoblins (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Hobgoblin_champion_scroll",
     "killsPerHour": 800.0,
     "requirements": [],
     "recommended": [
@@ -18924,7 +18986,7 @@
   },
   {
     "name": "Killing imps (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Imp_champion_scroll",
     "killsPerHour": 650.0,
     "requirements": [],
     "recommended": [
@@ -18950,7 +19012,7 @@
   },
   {
     "name": "Killing jogres (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Jogre_champion_scroll",
     "killsPerHour": 650.0,
     "requirements": [],
     "recommended": [
@@ -18975,7 +19037,7 @@
   },
   {
     "name": "Killing lesser demons (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Lesser_demon_champion_scroll",
     "killsPerHour": 500.0,
     "requirements": [],
     "recommended": [
@@ -19000,7 +19062,7 @@
   },
   {
     "name": "Killing skeletons (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Skeleton_champion_scroll",
     "killsPerHour": 1300.0,
     "requirements": [],
     "recommended": [
@@ -19025,7 +19087,7 @@
   },
   {
     "name": "Killing zombies (champion's challenge)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Champions%27_Challenge/Strategies#Zombie_champion_scroll",
     "killsPerHour": 1000.0,
     "requirements": [],
     "recommended": [
@@ -19050,7 +19112,7 @@
   },
   {
     "name": "Killing elder chaos druids",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Elder_Chaos_druid#Strategy",
     "killsPerHour": 480.0,
     "requirements": [
       {
@@ -19108,7 +19170,7 @@
   },
   {
     "name": "Killing chompies",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chompy_bird_hunting/Strategy",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -19301,7 +19363,7 @@
   },
   {
     "name": "Collecting termites (colossal wyrm agility)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Colossal_Wyrm_Agility_Course",
     "killsPerHour": 235.0,
     "requirements": [
       {
@@ -19317,7 +19379,10 @@
         "level": 62
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 43950.0,
+      "PRAYER": 2040.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -19349,7 +19414,7 @@
   },
   {
     "name": "Killing frogeels (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19382,7 +19447,7 @@
   },
   {
     "name": "Killing unicows (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19415,7 +19480,7 @@
   },
   {
     "name": "Killing spidines (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19448,7 +19513,7 @@
   },
   {
     "name": "Killing swordchicks (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19481,7 +19546,7 @@
   },
   {
     "name": "Killing jubsters (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19514,7 +19579,7 @@
   },
   {
     "name": "Killing newtroosts (creature creation)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Creature_Creation",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -19547,7 +19612,7 @@
   },
   {
     "name": "Killing cyclopes at the warriors' guild",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Warriors'_Guild#Cyclopes",
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -19672,7 +19737,7 @@
   },
   {
     "name": "Collecting anima-infused bark (forestry)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Forestry/Strategies",
     "killsPerHour": 1800.0,
     "requirements": [
       {
@@ -19688,7 +19753,9 @@
         "level": 35
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "WOODCUTTING": 90000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -19896,7 +19963,7 @@
   },
   {
     "name": "Doing entling events for god eggs",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Forestry/Strategies#Interacting_with_the_various_Forestry_Events",
     "killsPerHour": 7.0,
     "requirements": [
       {
@@ -19912,7 +19979,9 @@
         "level": 35
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "WOODCUTTING": 90000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -19952,7 +20021,7 @@
   },
   {
     "name": "Spending 100 numulite at the fossil island notes chest",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Stone_chest_(House_on_the_Hill)",
     "killsPerHour": 1000.0,
     "requirements": [
       {
@@ -20049,7 +20118,7 @@
   },
   {
     "name": "Killing demonic gorillas",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Demonic_gorilla/Strategies",
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -20130,7 +20199,7 @@
   },
   {
     "name": "Opening hunters' loot sacks (hunters' rumours)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Hunters%27_Rumours/Strategies#Pet_Hunting_(Level_72+)",
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -20139,8 +20208,16 @@
         "level": 46
       }
     ],
-    "recommended": [],
-    "experienceRates": {},
+    "recommended": [
+      {
+        "type": "SKILL",
+        "skill": "HUNTER",
+        "level": 72
+      }
+    ],
+    "experienceRates": {
+      "HUNTER": 160000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -20196,7 +20273,7 @@
   },
   {
     "name": "Exploring sailing islands",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Lost_schematics",
     "killsPerHour": 12.0,
     "requirements": [
       {
@@ -20410,7 +20487,7 @@
   },
   {
     "name": "Running laps of monkey agility",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ape_Atoll_Agility_Course",
     "killsPerHour": 95.0,
     "requirements": [
       {
@@ -20420,7 +20497,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 50000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -20476,7 +20555,7 @@
   },
   {
     "name": "Collecting gold nuggets at the motherlode mine",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Motherlode_Mine",
     "killsPerHour": 10.0,
     "requirements": [
       {
@@ -20486,7 +20565,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 42900.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -20542,7 +20623,7 @@
   },
   {
     "name": "Looting skeletons in the ancient cavern (my notes / ancient page)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_page#Completing_the_Collection_Log",
     "killsPerHour": 360.0,
     "requirements": [
       {
@@ -20773,7 +20854,7 @@
   },
   {
     "name": "Giving items to the clam (ocean encounters)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Giant_clam#Strategy",
     "killsPerHour": 0.5,
     "requirements": [
       {
@@ -20878,7 +20959,7 @@
   },
   {
     "name": "Waiting for random events",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Random_events#Spawn_mechanics",
     "killsPerHour": 0.66,
     "requirements": [],
     "recommended": [],
@@ -21074,7 +21155,7 @@
   },
   {
     "name": "Killing revenants (demon cyclops quads, skulled, off task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Revenants/Strategies",
     "killsPerHour": 260.0,
     "requirements": [],
     "recommended": [
@@ -21219,7 +21300,7 @@
   },
   {
     "name": "Killing revenants (demon cyclops quads, skulled, skipping for task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Revenants/Strategies",
     "killsPerHour": 107.0,
     "requirements": [],
     "recommended": [
@@ -21364,11 +21445,19 @@
   },
   {
     "name": "Collecting marks of grace (rooftop agility)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Rooftop_Agility_Courses",
     "killsPerHour": 25.0,
     "requirements": [],
-    "recommended": [],
-    "experienceRates": {},
+    "recommended": [
+      {
+        "type": "SKILL",
+        "skill": "AGILITY",
+        "level": 90
+      }
+    ],
+    "experienceRates": {
+      "AGILITY": 70000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21432,7 +21521,7 @@
   },
   {
     "name": "Killing frost dragons",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Frost_dragon/Strategies",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -21503,7 +21592,7 @@
   },
   {
     "name": "Killing orcas (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Orca",
     "killsPerHour": 90.0,
     "requirements": [],
     "recommended": [
@@ -21553,7 +21642,7 @@
   },
   {
     "name": "Killing albatross (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Albatross",
     "killsPerHour": 190.0,
     "requirements": [],
     "recommended": [
@@ -21579,7 +21668,7 @@
   },
   {
     "name": "Killing narwhal (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Narwhal",
     "killsPerHour": 165.0,
     "requirements": [],
     "recommended": [
@@ -21629,7 +21718,7 @@
   },
   {
     "name": "Killing stingray (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Stingray",
     "killsPerHour": 250.0,
     "requirements": [],
     "recommended": [
@@ -21655,7 +21744,7 @@
   },
   {
     "name": "Killing great white shark (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Great_white_shark",
     "killsPerHour": 180.0,
     "requirements": [],
     "recommended": [
@@ -21713,7 +21802,7 @@
   },
   {
     "name": "Killing vampyre kraken (boat combat)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Vampyre_kraken",
     "killsPerHour": 110.0,
     "requirements": [],
     "recommended": [
@@ -21779,7 +21868,7 @@
   },
   {
     "name": "Sorting through small salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Small_salvage",
     "killsPerHour": 920.0,
     "requirements": [
       {
@@ -21789,7 +21878,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 2000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21821,7 +21912,7 @@
   },
   {
     "name": "Sorting through fishy salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Fisherman%27s_shipwreck",
     "killsPerHour": 900.0,
     "requirements": [
       {
@@ -21831,7 +21922,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 5000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21863,7 +21956,7 @@
   },
   {
     "name": "Sorting through barracuda salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Barracuda_shipwreck",
     "killsPerHour": 840.0,
     "requirements": [
       {
@@ -21873,7 +21966,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 13000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21905,7 +22000,7 @@
   },
   {
     "name": "Sorting through large salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Large_shipwreck",
     "killsPerHour": 780.0,
     "requirements": [
       {
@@ -21915,7 +22010,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 17856.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21939,7 +22036,7 @@
   },
   {
     "name": "Sorting through plundered salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Pirate_shipwreck",
     "killsPerHour": 820.0,
     "requirements": [
       {
@@ -21949,7 +22046,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 26844.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -21981,7 +22080,7 @@
   },
   {
     "name": "Sorting through martial salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mercenary_shipwreck",
     "killsPerHour": 700.0,
     "requirements": [
       {
@@ -21991,7 +22090,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 44636.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22031,7 +22132,7 @@
   },
   {
     "name": "Sorting through fremennik salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Fremennik_shipwreck",
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -22041,7 +22142,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 51708.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22065,7 +22168,7 @@
   },
   {
     "name": "Sorting through opulent salvage",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Merchant_shipwreck",
     "killsPerHour": 550.0,
     "requirements": [
       {
@@ -22075,7 +22178,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 60200.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22139,7 +22244,7 @@
   },
   {
     "name": "Killing soldiers in the shayzien combat ring",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Combat_Ring_(Shayzien)",
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -22357,7 +22462,7 @@
   },
   {
     "name": "Mining stardust from shooting stars",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Shooting_Stars",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22367,7 +22472,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 27880.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22391,7 +22498,7 @@
   },
   {
     "name": "Fishing (2-tick tuna and swordfish)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tick_manipulation#2-tick_Fishing",
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -22401,7 +22508,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 17160.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22425,7 +22534,7 @@
   },
   {
     "name": "Mining (gemstone rocks)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Gemstone_rock",
     "killsPerHour": 1770.0,
     "requirements": [],
     "recommended": [],
@@ -22445,7 +22554,7 @@
   },
   {
     "name": "Woodcutting (1.5-tick teaks)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tick_manipulation#1.5-tick_Woodcutting",
     "killsPerHour": 2350.0,
     "requirements": [
       {
@@ -22455,7 +22564,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "WOODCUTTING": 230000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22471,7 +22582,7 @@
   },
   {
     "name": "Hunting chinchompas (black chinchompas)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Hunting_black_chinchompas",
     "killsPerHour": 850.0,
     "requirements": [
       {
@@ -22481,7 +22592,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "HUNTER": 94500.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22497,7 +22610,7 @@
   },
   {
     "name": "Agility (penguin course)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Penguin_Agility_Course",
     "killsPerHour": 55.0,
     "requirements": [
       {
@@ -22507,7 +22620,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "AGILITY": 27000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22523,7 +22638,7 @@
   },
   {
     "name": "Farming (fruit trees)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Farming_runs#Fruit_tree_run",
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -22557,7 +22672,7 @@
   },
   {
     "name": "Thieving (seed stalls)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Seed_Stall",
     "killsPerHour": 1915.0,
     "requirements": [
       {
@@ -22583,7 +22698,7 @@
   },
   {
     "name": "Runecrafting (fire runes)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Fire_Altar#Experience",
     "killsPerHour": 26400.0,
     "requirements": [
       {
@@ -22593,7 +22708,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "RUNECRAFT": 27000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22609,7 +22726,7 @@
   },
   {
     "name": "Sailing (port tasks)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Guide:Courier_Task_Optimizations_(Getting_max_XP)",
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -22618,7 +22735,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "SAILING": 90000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -22642,7 +22761,7 @@
   },
   {
     "name": "Killing crawling hands",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Crawling_Hand",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22693,7 +22812,7 @@
   },
   {
     "name": "Killing cockatrice",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Cockatrice",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -22765,7 +22884,7 @@
   },
   {
     "name": "Killing basilisks",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Basilisk",
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -22829,7 +22948,7 @@
   },
   {
     "name": "Killing basilisk knights (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Basilisk_Knight/Strategies",
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -22984,7 +23103,7 @@
   },
   {
     "name": "Killing kurask",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Kurask",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -23080,7 +23199,7 @@
   },
   {
     "name": "Killing abyssal demons (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Abyssal_demons",
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -23207,7 +23326,7 @@
   },
   {
     "name": "Killing dust devils (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Dust_devils",
     "killsPerHour": 650.0,
     "requirements": [
       {
@@ -23318,7 +23437,7 @@
   },
   {
     "name": "Killing waterfiends",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Waterfiend",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -23364,7 +23483,7 @@
   },
   {
     "name": "Killing gargoyles",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Gargoyle",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -23451,7 +23570,7 @@
   },
   {
     "name": "Killing mogres",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mogre",
     "killsPerHour": 90.0,
     "requirements": [
       {
@@ -23514,7 +23633,7 @@
   },
   {
     "name": "Killing brine rats",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Brine_rat",
     "killsPerHour": 675.0,
     "requirements": [
       {
@@ -23565,7 +23684,7 @@
   },
   {
     "name": "Killing turoth",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Turoth",
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -23624,7 +23743,7 @@
   },
   {
     "name": "Killing cave horrors",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Cave_horror",
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -23711,7 +23830,7 @@
   },
   {
     "name": "Killing fossil island wyverns",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Fossil_Island_wyverns",
     "killsPerHour": 145.0,
     "requirements": [
       {
@@ -23766,7 +23885,7 @@
   },
   {
     "name": "Killing ancient wyverns",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_Wyvern/Strategies",
     "killsPerHour": 75.0,
     "requirements": [
       {
@@ -23872,7 +23991,7 @@
   },
   {
     "name": "Killing skeletal wyverns",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_Wyvern/Strategies",
     "killsPerHour": 100.0,
     "requirements": [
       {
@@ -23961,7 +24080,7 @@
   },
   {
     "name": "Killing terror dogs",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Terror_dog",
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -24006,7 +24125,7 @@
   },
   {
     "name": "Killing cave crawlers",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Cave_crawler",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -24053,7 +24172,7 @@
   },
   {
     "name": "Killing cave slimes",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Cave_slime",
     "killsPerHour": 600.0,
     "requirements": [
       {
@@ -24100,7 +24219,7 @@
   },
   {
     "name": "Killing pyrefiends",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Pyrefiend",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -24151,7 +24270,7 @@
   },
   {
     "name": "Killing harpie bug swarms",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Harpie_Bug_Swarm",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -24202,7 +24321,7 @@
   },
   {
     "name": "Killing bloodvelds",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Bloodveld",
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -24253,7 +24372,7 @@
   },
   {
     "name": "Killing warped jellies",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Warped_Jelly",
     "killsPerHour": 650.0,
     "requirements": [
       {
@@ -24336,7 +24455,7 @@
   },
   {
     "name": "Killing greater nechryael (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Nechryael",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -24451,7 +24570,7 @@
   },
   {
     "name": "Killing spiritual mages (non-zaros)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Killing_spiritual_mages",
     "killsPerHour": 180.0,
     "requirements": [
       {
@@ -24532,7 +24651,7 @@
   },
   {
     "name": "Killing spiritual mages (zaros)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Spiritual_mage#Zaros",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -24657,7 +24776,7 @@
   },
   {
     "name": "Killing cave kraken (non-boss, on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Cave_krakens",
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -24721,7 +24840,7 @@
   },
   {
     "name": "Killing dark beasts",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Dark_beast",
     "killsPerHour": 190.0,
     "requirements": [
       {
@@ -24808,7 +24927,7 @@
   },
   {
     "name": "Killing smoke devils (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Smoke_devil/Strategies",
     "killsPerHour": 700.0,
     "requirements": [
       {
@@ -24915,7 +25034,7 @@
   },
   {
     "name": "Killing wyrms (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Wyrms",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -25038,7 +25157,7 @@
   },
   {
     "name": "Opening the brimstone chest",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_chest",
     "killsPerHour": 4.0,
     "requirements": [
       {
@@ -25103,7 +25222,7 @@
   },
   {
     "name": "Killing drakes (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Drake",
     "killsPerHour": 155.0,
     "requirements": [
       {
@@ -25230,7 +25349,7 @@
   },
   {
     "name": "Killing sulphur lizards",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Sulphur_Lizard",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -25277,7 +25396,7 @@
   },
   {
     "name": "Killing infernal mages",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Infernal_Mage",
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -25319,7 +25438,7 @@
   },
   {
     "name": "Killing banshees",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Banshee",
     "killsPerHour": 800.0,
     "requirements": [
       {
@@ -25369,7 +25488,7 @@
   },
   {
     "name": "Killing aberrant spectres",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Aberrant_spectre",
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -25424,7 +25543,7 @@
   },
   {
     "name": "Killing aquanites (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Aquanites",
     "killsPerHour": 150.0,
     "requirements": [
       {
@@ -25545,14 +25664,14 @@
   },
   {
     "name": "Opening larran's big chest",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Opening_larran%27s_big_chests",
     "killsPerHour": 1500.0,
     "requirements": [],
     "recommended": [
       {
         "type": "SKILL",
         "skill": "FISHING",
-        "level": 99
+        "level": 70
       }
     ],
     "experienceRates": {},
@@ -25587,7 +25706,7 @@
   },
   {
     "name": "Pickpocketing from darkmeyer vyres",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Pickpocketing_vyres",
     "killsPerHour": 540.0,
     "requirements": [
       {
@@ -25621,7 +25740,10 @@
         "level": 47
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "THIEVING": 220968.0,
+      "MAGIC": 3480.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -25637,7 +25759,7 @@
   },
   {
     "name": "Killing vyrewatch sentinels",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Vyrewatch_Sentinel/Strategies",
     "killsPerHour": 160.0,
     "requirements": [
       {
@@ -25713,7 +25835,7 @@
   },
   {
     "name": "Killing warped terrorbirds",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Warped_Terrorbird",
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -25752,7 +25874,7 @@
   },
   {
     "name": "Killing sulphur naguas",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Sulphur_Nagua",
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -25787,7 +25909,7 @@
   },
   {
     "name": "Looting zombie pirate's lockers",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Killing_zombie_pirates_(Max_efficiency)",
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -25831,7 +25953,7 @@
   },
   {
     "name": "Killing araxytes (level 146, on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Araxytes",
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -25914,7 +26036,7 @@
   },
   {
     "name": "Killing earthen naguas",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Earthen_Nagua",
     "killsPerHour": 270.0,
     "requirements": [
       {
@@ -25969,7 +26091,7 @@
   },
   {
     "name": "Killing elder custodian stalkers",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Elder_custodian_stalker",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -26064,7 +26186,7 @@
   },
   {
     "name": "Killing gryphons (on task)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/Gryphons",
     "killsPerHour": 600.0,
     "requirements": [
       {
@@ -26154,7 +26276,7 @@
   },
   {
     "name": "Killing tormented demons",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_Demon/Strategies",
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -26243,7 +26365,7 @@
   },
   {
     "name": "Killing bulk tzhaar",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Slayer_task/TzHaar#Bursting/Barraging_TzHaar-Ket",
     "killsPerHour": 750.0,
     "requirements": [
       {
@@ -26346,7 +26468,7 @@
   },
   {
     "name": "Killing tzhaar-mej",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/TzHaar-Mej",
     "killsPerHour": 350.0,
     "requirements": [
       {
@@ -26384,7 +26506,7 @@
   },
   {
     "name": "Plucking herbiboar",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Herbiboar",
     "killsPerHour": 60.0,
     "requirements": [
       {
@@ -26421,7 +26543,7 @@
   },
   {
     "name": "Killing lizardmen",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Lizardman",
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -26451,7 +26573,7 @@
   },
   {
     "name": "Killing lizardman shamans",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Lizardman_shaman/Strategies",
     "killsPerHour": 125.0,
     "requirements": [
       {
@@ -26526,7 +26648,7 @@
   },
   {
     "name": "Fishing shark",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Catching_sharks_with_shark_lure",
     "killsPerHour": 960.0,
     "requirements": [
       {
@@ -26536,7 +26658,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 13200.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26552,7 +26676,7 @@
   },
   {
     "name": "Fishing bass",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Raw_bass",
     "killsPerHour": 360.0,
     "requirements": [
       {
@@ -26562,7 +26686,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 36000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26578,7 +26704,7 @@
   },
   {
     "name": "Fishing giant krill (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26604,7 +26730,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26636,7 +26764,7 @@
   },
   {
     "name": "Fishing haddock (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26662,7 +26790,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26694,7 +26824,7 @@
   },
   {
     "name": "Fishing yellowfin (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26720,7 +26850,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26752,7 +26884,7 @@
   },
   {
     "name": "Fishing halibut (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26778,7 +26910,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26810,7 +26944,7 @@
   },
   {
     "name": "Fishing bluefin (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26836,7 +26970,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26868,7 +27004,7 @@
   },
   {
     "name": "Fishing marlin (deep sea trawling)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Deep_sea_trawling/Strategies",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -26889,7 +27025,9 @@
         "level": 93
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "FISHING": 15000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26921,7 +27059,7 @@
   },
   {
     "name": "Killing in the wilderness god wars dungeon (barrage)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness_God_Wars_Dungeon",
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -26947,7 +27085,7 @@
   },
   {
     "name": "Looting grand gold chests (pyramid plunder)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Pyramid_Plunder",
     "killsPerHour": 192.0,
     "requirements": [
       {
@@ -26963,7 +27101,9 @@
         "level": 91
       }
     ],
-    "experienceRates": {},
+    "experienceRates": {
+      "THIEVING": 275000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -26979,7 +27119,7 @@
   },
   {
     "name": "Killing mithril dragons",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Mithril_dragon/Strategies",
     "killsPerHour": 84.0,
     "requirements": [
       {
@@ -27286,7 +27426,7 @@
   },
   {
     "name": "Killing adamant dragons",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Adamant_dragon/Strategies",
     "killsPerHour": 85.0,
     "requirements": [
       {
@@ -27374,7 +27514,7 @@
   },
   {
     "name": "Killing rune dragons",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Rune_dragon/Strategies",
     "killsPerHour": 75.0,
     "requirements": [
       {
@@ -27462,7 +27602,7 @@
   },
   {
     "name": "Charging glories at the fountain of rune",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Creating_eternal_glories",
     "killsPerHour": 1700.0,
     "requirements": [
       {
@@ -27570,7 +27710,7 @@
   },
   {
     "name": "Killing ogress shamans",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ogress_Shaman",
     "killsPerHour": 250.0,
     "requirements": [
       {
@@ -27611,7 +27751,7 @@
   },
   {
     "name": "Collecting unidentified minerals at the mining guild",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Unidentified_minerals",
     "killsPerHour": 20.0,
     "requirements": [
       {
@@ -27621,7 +27761,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "MINING": 75000.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -27653,7 +27795,7 @@
   },
   {
     "name": "Killing minotaurs (stronghold of security)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Minotaur",
     "killsPerHour": 500.0,
     "requirements": [],
     "recommended": [],
@@ -27673,7 +27815,7 @@
   },
   {
     "name": "Killing flesh crawlers (stronghold of security)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Flesh_Crawler",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -27698,7 +27840,7 @@
   },
   {
     "name": "Killing catablepons (stronghold of security)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Catablepon",
     "killsPerHour": 300.0,
     "requirements": [
       {
@@ -27723,7 +27865,7 @@
   },
   {
     "name": "Killing ankou (stronghold of security)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Ankou",
     "killsPerHour": 200.0,
     "requirements": [
       {
@@ -27753,7 +27895,7 @@
   },
   {
     "name": "Killing moss giants",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Moss_giant",
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -27826,7 +27968,7 @@
   },
   {
     "name": "Killing hill giants",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Hill_Giant",
     "killsPerHour": 900.0,
     "requirements": [
       {
@@ -27904,7 +28046,7 @@
   },
   {
     "name": "Killing underwater crabs (level 23)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Crab#Drops_(Level_23)",
     "killsPerHour": 400.0,
     "requirements": [
       {
@@ -27946,7 +28088,7 @@
   },
   {
     "name": "Killing undead druids",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Undead_Druid",
     "killsPerHour": 240.0,
     "requirements": [
       {
@@ -28009,7 +28151,7 @@
   },
   {
     "name": "Looting crystal implings",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Crystal_impling#Strategy",
     "killsPerHour": 30.0,
     "requirements": [
       {
@@ -28039,7 +28181,7 @@
   },
   {
     "name": "Killing the prifddinas rabbit",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Rabbit_(Prifddinas)#Strategy",
     "killsPerHour": 7.0,
     "requirements": [
       {
@@ -28064,7 +28206,7 @@
   },
   {
     "name": "Pickpocketing from prifddinas elves",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Money_making_guide/Pickpocketing_elves",
     "killsPerHour": 450.0,
     "requirements": [
       {
@@ -28078,7 +28220,9 @@
       }
     ],
     "recommended": [],
-    "experienceRates": {},
+    "experienceRates": {
+      "THIEVING": 197848.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -28094,7 +28238,7 @@
   },
   {
     "name": "Killing elves (prifddinas)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Guard_(Prifddinas)",
     "killsPerHour": 540.0,
     "requirements": [
       {
@@ -28119,7 +28263,7 @@
   },
   {
     "name": "Opening the elven crystal chest",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Elven_Crystal_Chest",
     "killsPerHour": 1500.0,
     "requirements": [
       {
@@ -28192,7 +28336,7 @@
   },
   {
     "name": "Collecting mermaid tears (fossil island underwater)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Underwater_Agility_and_Thieving",
     "killsPerHour": 230.0,
     "requirements": [
       {
@@ -28200,8 +28344,22 @@
         "questName": "BONE_VOYAGE"
       }
     ],
-    "recommended": [],
-    "experienceRates": {},
+    "recommended": [
+      {
+        "type": "SKILL",
+        "skill": "THIEVING",
+        "level": 65
+      },
+      {
+        "type": "SKILL",
+        "skill": "AGILITY",
+        "level": 60
+      }
+    ],
+    "experienceRates": {
+      "THIEVING": 84560.0,
+      "AGILITY": 900.0
+    },
     "rewards": [
       {
         "type": "ITEM",
@@ -28217,7 +28375,7 @@
   },
   {
     "name": "Killing armoured zombies (zemouregal)",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Armoured_zombie_(Zemouregal%27s_Fort)",
     "killsPerHour": 500.0,
     "requirements": [
       {
@@ -28274,7 +28432,7 @@
   },
   {
     "name": "Opening the moon chest",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Chest_(moon_key)",
     "killsPerHour": 0.4,
     "requirements": [],
     "recommended": [
@@ -28366,7 +28524,7 @@
   },
   {
     "name": "Cutting squid",
-    "wikiLink": null,
+    "wikiLink": "https://oldschool.runescape.wiki/w/Squid_beak",
     "killsPerHour": 1800.0,
     "requirements": [
       {
