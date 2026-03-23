@@ -13,9 +13,11 @@ import java.io.OutputStreamWriter;
 import java.io.IOException;
 import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
+import net.runelite.api.ChatMessageType;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.Skill;
+import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.events.StatChanged;
@@ -58,6 +60,9 @@ public class LogHunterPlugin extends Plugin
 
     private static final int COLLECTION_LOG_NULL_ITEM_ID = 6512;
     private static final Set<String> IGNORED_PAGES = Set.of("Bosses", "Raids", "Clues", "Minigames", "Other");
+
+	private static final String COLLECTION_LOG_PREFIX = "New item added to your collection log: ";
+	private final transient Map<String, Integer> itemNameCache = new HashMap<>();
 
     @Inject
     private Client client;
@@ -135,6 +140,30 @@ public class LogHunterPlugin extends Plugin
 	}
 
 	/**
+	 * Populates the O(1) lookup cache for collection log item names to their IDs.
+	 * This runs on the client thread to safely query the ItemManager.
+	 */
+	private void buildItemNameCache()
+	{
+		clientThread.invokeLater(() -> {
+			itemNameCache.clear();
+			for (Activity activity : activities) {
+				for (Reward reward : activity.getRewards()) {
+					if (reward instanceof ItemReward) {
+						ItemReward itemReward = (ItemReward) reward;
+						int itemId = itemReward.getItemId();
+						String name = itemManager.getItemComposition(itemId).getName();
+						if (name != null && !name.isEmpty()) {
+							itemNameCache.put(name, itemId);
+						}
+					}
+				}
+			}
+			log.debug("Built event-driven loot cache with {} entries.", itemNameCache.size());
+		});
+	}
+
+	/**
 	 * Called when the plugin is started.
 	 * Initializes the custom Gson parser, sets up the UI panel and navigation button,
 	 * loads activity and user data, and queues the initial suggestion calculation.
@@ -165,6 +194,7 @@ public class LogHunterPlugin extends Plugin
 		clientToolbar.addNavigation(navButton);
 
 		loadActivities();
+		buildItemNameCache();
 		queueCalculateSuggestions();
 
 		log.info("Log Hunter started!");
@@ -368,6 +398,39 @@ public class LogHunterPlugin extends Plugin
             for (Widget child : nestedChildren) getActiveTextWidgets(child, results);
         }
     }
+
+	/**
+	 * Listens for the standardized server broadcast when a collection log slot is unlocked.
+	 * Automatically updates account-isolated storage and triggers a recalculation.
+	 */
+	@Subscribe
+	public void onChatMessage(ChatMessage event)
+	{
+		if (event.getType() != ChatMessageType.GAMEMESSAGE) {
+			return;
+		}
+
+		String message = event.getMessage();
+
+		// Phase 1: Intercept the Drop
+		if (message.startsWith(COLLECTION_LOG_PREFIX)) {
+			String itemName = message.substring(COLLECTION_LOG_PREFIX.length()).trim();
+
+			// Phase 2 & 3: Fast Lookup and State Injection
+			Integer itemId = itemNameCache.get(itemName);
+			if (itemId != null) {
+				// Mark as acquired (assuming 1 represents 'unlocked' in logData)
+				pluginData.getLogData().put(itemId, 1);
+				saveData();
+
+				// Phase 4: Trigger Math Engine
+				queueCalculateSuggestions();
+				log.info("Event-Driven Loot Detected: Acquired {} (ID: {}). Re-calculating Best Case times.", itemName, itemId);
+			} else {
+				log.debug("Collection log item '{}' not found in tracked activities cache.", itemName);
+			}
+		}
+	}
 
     /**
      * Fired when the game's state changes.
