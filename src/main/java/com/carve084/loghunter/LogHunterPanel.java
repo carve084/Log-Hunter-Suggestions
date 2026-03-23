@@ -1,12 +1,19 @@
 package com.carve084.loghunter;
 
+import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.util.List;
 import java.util.Set;
@@ -17,9 +24,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.OverlayLayout;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
@@ -40,24 +49,59 @@ import net.runelite.client.util.LinkBrowser;
  */
 public class LogHunterPanel extends PluginPanel
 {
+	/**
+	 * A custom JLabel that draws a 1-pixel black drop shadow behind its text
+	 * to ensure readability against dynamic background colors.
+	 */
+	private static class ShadowLabel extends JLabel {
+		public ShadowLabel() {
+			super();
+		}
+
+		@Override
+		protected void paintComponent(Graphics g) {
+			String text = getText();
+			if (text == null || text.isEmpty()) return;
+
+			Graphics2D g2d = (Graphics2D) g;
+			g2d.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+
+			FontMetrics fm = g2d.getFontMetrics();
+			int x = (getWidth() - fm.stringWidth(text)) / 2;
+			int y = ((getHeight() - fm.getHeight()) / 2) + fm.getAscent();
+
+			// Draw shadow
+			g2d.setColor(Color.BLACK);
+			g2d.drawString(text, x + 1, y + 1);
+
+			// Draw primary text
+			g2d.setColor(getForeground());
+			g2d.drawString(text, x, y);
+		}
+	}
+
 	private final JPanel mainContainer = new JPanel();
 
 	// Top Result UI
 	private final JPanel topResultPanel = new JPanel();
 	private final JLabel activityNameLabel = new JLabel();
-	private final JButton wikiButton = new JButton(); // NEW: Wiki Button
-	private final JLabel timeLabel = new JLabel();
-	private final JLabel fastestRewardLabel = new JLabel();
-	private final JLabel slotsLabel = new JLabel();
-	private final JLabel percentLabel = new JLabel();
-	private final JLabel difficultyLabel = new JLabel();
+	private final JButton wikiButton = new JButton();
 
-	private final JLabel slotsTitleLabel;
-	private final JLabel percentTitleLabel;
+	// Restructured Top Stats UI
+	private final JLabel targetLabel = new JLabel();
+	private final JPanel progressWrapper = new JPanel(new BorderLayout()); // Added Wrapper
+	private final JPanel progressContainer = new JPanel();
+	private final JProgressBar progressBar = new JProgressBar();
+	private final ShadowLabel progressLabel = new ShadowLabel();
+	private final JPanel metricsPanel = new JPanel(new BorderLayout());
+	private final JLabel timeLabel = new JLabel();
+	private final JLabel difficultyLabel = new JLabel();
 
 	// Runner-up UI
 	private final JPanel runnerUpPanel = new JPanel();
 	private final JLabel otherSuggestionsTitle = new JLabel("Other Suggestions:");
+	private final ImageIcon blockIcon = createBlockIcon(ColorScheme.PROGRESS_ERROR_COLOR);
+	private final ImageIcon blockHoverIcon = createBlockIcon(Color.RED);
 
 	// 100% Completion
 	private final JLabel completionLabel = new JLabel(
@@ -98,6 +142,7 @@ public class LogHunterPanel extends PluginPanel
 
 	// UI State Tracker for Memory Leak Prevention
 	private String currentTopActivityName = null;
+	private String currentWikiLink = null; // Added state tracker for Wiki button
 
 	/**
 	 * Constructs the UI panel and all of its sub-components.
@@ -122,6 +167,19 @@ public class LogHunterPanel extends PluginPanel
 
 		setLayout(new BorderLayout());
 
+		// --- Setup Reusable Hover Listener ---
+		MouseAdapter buttonHoverAdapter = new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				((JButton) e.getSource()).setBackground(ColorScheme.DARKER_GRAY_HOVER_COLOR);
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				((JButton) e.getSource()).setBackground(ColorScheme.DARKER_GRAY_COLOR);
+			}
+		};
+
 		// --- Load Icon and Configure Wiki Button ---
 		final BufferedImage iconImg = ImageUtil.loadImageResource(getClass(), "/wiki_icon.png");
 		// Assets
@@ -131,6 +189,15 @@ public class LogHunterPanel extends PluginPanel
 		wikiButton.setToolTipText("Open OSRS Wiki Strategy Guide");
 		wikiButton.setFocusPainted(false);
 		wikiButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+		wikiButton.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		wikiButton.addMouseListener(buttonHoverAdapter);
+
+		// Single, clean action listener for the Wiki button
+		wikiButton.addActionListener(e -> {
+			if (currentWikiLink != null && !currentWikiLink.isEmpty()) {
+				LinkBrowser.browse(currentWikiLink);
+			}
+		});
 
 		// Use GridBagLayout for the scrolling container to force width constraints
 		mainContainer.setLayout(new GridBagLayout());
@@ -172,23 +239,57 @@ public class LogHunterPanel extends PluginPanel
 		c.gridwidth = 2;
 		topResultPanel.add(activityNameLabel, c);
 		c.gridy++;
-		c.gridwidth = 1;
 
 		// Spacer
-		c.gridwidth = 2;
-		topResultPanel.add(Box.createRigidArea(new Dimension(0, 8)), c);
+		topResultPanel.add(Box.createRigidArea(new Dimension(0, 4)), c);
 		c.gridy++;
-		c.gridwidth = 1;
 
-		// Stats
-		addLabelRow(topResultPanel, c, "Est. Time:", timeLabel);
-		addLabelRow(topResultPanel, c, "Target:", fastestRewardLabel);
-		slotsTitleLabel = addLabelRow(topResultPanel, c, "Slots Left:", slotsLabel);
-		percentTitleLabel = addLabelRow(topResultPanel, c, "Log %:", percentLabel);
-		addLabelRow(topResultPanel, c, "Difficulty:", difficultyLabel);
+		// Wrapping Target Line
+		targetLabel.setHorizontalAlignment(JLabel.LEFT);
+		topResultPanel.add(targetLabel, c);
+		c.gridy++;
+
+		// Spacer
+		topResultPanel.add(Box.createRigidArea(new Dimension(0, 4)), c);
+		c.gridy++;
+
+		// Progress Bar Overlay
+		progressContainer.setLayout(new OverlayLayout(progressContainer));
+		progressContainer.setOpaque(false);
+
+		progressLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+		progressLabel.setAlignmentY(Component.CENTER_ALIGNMENT);
+		progressLabel.setForeground(Color.WHITE);
+		progressLabel.setFont(FontManager.getRunescapeSmallFont());
+		progressLabel.setOpaque(false); // Ensures background is completely transparent
+
+		progressBar.setAlignmentX(Component.CENTER_ALIGNMENT);
+		progressBar.setAlignmentY(Component.CENTER_ALIGNMENT);
+		progressBar.setStringPainted(false); // Disable built-in string for crisp text
+		progressBar.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		progressBar.setPreferredSize(new Dimension(100, 16)); // Ensures appropriate height
+		progressBar.setMaximumSize(new Dimension(Integer.MAX_VALUE, 16)); // Stretches width horizontally
+
+		progressContainer.add(progressLabel); // Added first = drawn on top
+		progressContainer.add(progressBar);
+
+		// Wrap the progress container and its bottom spacer together
+		progressWrapper.setOpaque(false);
+		progressWrapper.add(progressContainer, BorderLayout.CENTER);
+		progressWrapper.add(Box.createRigidArea(new Dimension(0, 4)), BorderLayout.SOUTH);
+
+		topResultPanel.add(progressWrapper, c);
+		c.gridy++;
+
+		// Metrics Split Line (Time Left, Difficulty Right)
+		metricsPanel.setOpaque(false);
+		metricsPanel.add(timeLabel, BorderLayout.WEST);
+		metricsPanel.add(difficultyLabel, BorderLayout.EAST);
+		topResultPanel.add(metricsPanel, c);
+		c.gridy++;
 
 		// Action Row (Wiki & Skip)
-		c.gridx = 0; // <--- The magic fix! Resets to the left edge
+		c.gridx = 0;
 		c.gridwidth = 2;
 		c.weightx = 1.0;
 		c.fill = GridBagConstraints.HORIZONTAL;
@@ -196,6 +297,8 @@ public class LogHunterPanel extends PluginPanel
 
 		JButton topSkipButton = new JButton("Skip Activity");
 		topSkipButton.setFocusable(false);
+		topSkipButton.setBackground(ColorScheme.DARKER_GRAY_COLOR);
+		topSkipButton.addMouseListener(buttonHoverAdapter);
 		topSkipButton.addActionListener(e -> {
 			if (currentTopActivityName != null) {
 				onSkipActivity.accept(currentTopActivityName);
@@ -212,8 +315,11 @@ public class LogHunterPanel extends PluginPanel
 		// --- 2. RUNNER UP PANEL ---
 		runnerUpPanel.setLayout(new BoxLayout(runnerUpPanel, BoxLayout.Y_AXIS));
 		runnerUpPanel.setBorder(new EmptyBorder(0, 0, 0, 0));
+
 		otherSuggestionsTitle.setForeground(ColorScheme.BRAND_ORANGE);
-		otherSuggestionsTitle.setBorder(new EmptyBorder(0, 2, 5, 0));
+		otherSuggestionsTitle.setAlignmentX(Component.LEFT_ALIGNMENT);
+		// Indent left margin by 5px to align with the Top Suggestion TitledBorder
+		otherSuggestionsTitle.setBorder(new EmptyBorder(0, 5, 5, 0));
 
 		// --- 3. SKIPPED PANEL ---
 		skippedActivitiesPanel.setLayout(new BoxLayout(skippedActivitiesPanel, BoxLayout.Y_AXIS));
@@ -343,29 +449,44 @@ public class LogHunterPanel extends PluginPanel
 	}
 
 	/**
-	 * A helper method to create a standard title/value row in a GridBagLayout panel.
-	 * @param panel The panel to add the row to.
-	 * @param c The GridBagConstraints to use.
-	 * @param title The text for the left-aligned title label.
-	 * @param valueLabel The JLabel to use for the right-aligned value.
-	 * @return The created title JLabel.
+	 * Creates a programmatic block/cancel icon to avoid missing image resource issues.
 	 */
-	private JLabel addLabelRow(JPanel panel, GridBagConstraints c, String title, JLabel valueLabel) {
-		JLabel titleLabel = new JLabel(title);
-		titleLabel.setForeground(Color.LIGHT_GRAY);
-		c.gridx = 0;
-		c.weightx = 0;
-		c.anchor = GridBagConstraints.WEST;
-		panel.add(titleLabel, c);
+	private ImageIcon createBlockIcon(Color color) {
+		BufferedImage img = new BufferedImage(14, 14, BufferedImage.TYPE_INT_ARGB);
+		Graphics2D g = img.createGraphics();
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setColor(color);
+		g.setStroke(new BasicStroke(1.5f));
+		g.drawOval(1, 1, 11, 11);
+		g.drawLine(3, 3, 10, 10);
+		g.dispose();
+		return new ImageIcon(img);
+	}
 
-		c.gridx = 1;
-		c.weightx = 1;
-		c.anchor = GridBagConstraints.EAST;
-		valueLabel.setHorizontalAlignment(JLabel.RIGHT);
-		panel.add(valueLabel, c);
-		c.gridy++;
+	/**
+	 * Interpolates between two colors based on a ratio (0.0 to 1.0).
+	 */
+	private Color interpolateColor(Color c1, Color c2, float ratio) {
+		int r = (int) (c1.getRed() + ratio * (c2.getRed() - c1.getRed()));
+		int g = (int) (c1.getGreen() + ratio * (c2.getGreen() - c1.getGreen()));
+		int b = (int) (c1.getBlue() + ratio * (c2.getBlue() - c1.getBlue()));
+		return new Color(r, g, b);
+	}
 
-		return titleLabel;
+	/**
+	 * Calculates a color based on a 3-point gradient scale.
+	 */
+	private Color calculateColorScale(double value, double minPoint, double midPoint, double maxPoint, Color minColor, Color midColor, Color maxColor) {
+		if (value <= minPoint) return minColor;
+		if (value >= maxPoint) return maxColor;
+
+		if (value < midPoint) {
+			double ratio = (value - minPoint) / (midPoint - minPoint);
+			return interpolateColor(minColor, midColor, (float) ratio);
+		} else {
+			double ratio = (value - midPoint) / (maxPoint - midPoint);
+			return interpolateColor(midColor, maxColor, (float) ratio);
+		}
 	}
 
 	/**
@@ -392,7 +513,7 @@ public class LogHunterPanel extends PluginPanel
 		int suggestionLimit,
 		boolean isLoggedIn,
 		boolean requiresScan,
-		boolean isFullyCompleted) // <--- NEW PARAMETER
+		boolean isFullyCompleted)
 	{
 		SwingUtilities.invokeLater(() ->
 		{
@@ -403,7 +524,7 @@ public class LogHunterPanel extends PluginPanel
 				topResultPanel.setVisible(false);
 				runnerUpPanel.setVisible(false);
 				completionLabel.setVisible(false);
-				blockedTipLabel.setVisible(false); // Keep hidden
+				blockedTipLabel.setVisible(false);
 				skippedActivitiesPanel.setVisible(false);
 				scanWarningLabel.setVisible(false);
 				loginMessageLabel.setVisible(true);
@@ -420,7 +541,7 @@ public class LogHunterPanel extends PluginPanel
 				topResultPanel.setVisible(false);
 				runnerUpPanel.setVisible(false);
 				completionLabel.setVisible(false);
-				blockedTipLabel.setVisible(false); // Keep hidden
+				blockedTipLabel.setVisible(false);
 				skippedActivitiesPanel.setVisible(false);
 				scanWarningLabel.setVisible(true);
 
@@ -531,62 +652,61 @@ public class LogHunterPanel extends PluginPanel
 	{
 		Activity activity = best.getActivity();
 		Activity.CalculationResult result = best.getResult();
-
-		activityNameLabel.setText("<html><div style='text-align: center; width: 150px;'>" + activity.getName() + "</div></html>");
-		timeLabel.setText(formatTimeDetailed(result.getHours()));
-		difficultyLabel.setText(activity.getDifficulty());
-
 		currentTopActivityName = activity.getName();
 
-		// --- NEW: Wiki Link Logic ---
-		if (activity.getWikiLink() != null && !activity.getWikiLink().isEmpty()) {
-			wikiButton.setVisible(true);
-			// Clear existing listeners to prevent stacking
-			for (var al : wikiButton.getActionListeners()) {
-				wikiButton.removeActionListener(al);
-			}
-			wikiButton.addActionListener(e -> LinkBrowser.browse(activity.getWikiLink()));
-		} else {
-			wikiButton.setVisible(false);
-		}
-		// ----------------------------
+		activityNameLabel.setText("<html><div style='text-align: center; width: 150px;'>" + activity.getName() + "</div></html>");
 
+		// --- Target Line (Wrapping) ---
+		String targetName = best.getFastestRewardName();
+		targetLabel.setText("<html><div style='width: 150px;'><b>Target:</b> " + targetName + "</div></html>");
+
+		Reward fastest = result.getFastestReward();
+		if (fastest instanceof ItemReward) {
+			targetLabel.setToolTipText("Item ID: " + ((ItemReward) fastest).getItemId());
+		} else if (fastest instanceof LevelReward) {
+			LevelReward lvl = (LevelReward) fastest;
+			targetLabel.setToolTipText("Target: Level " + lvl.getTargetLevel() + " " + lvl.getSkill().getName());
+		} else {
+			targetLabel.setToolTipText(null);
+		}
+
+		// --- Goal Line (Progress Bar) ---
 		int slotsLeft = result.getItemRewardsLeft();
 		int totalSlots = activity.getTotalItemRewards();
 
 		if (totalSlots == 0) {
-			slotsTitleLabel.setVisible(false);
-			slotsLabel.setVisible(false);
-			percentTitleLabel.setVisible(false);
-			percentLabel.setVisible(false);
+			progressWrapper.setVisible(false);
 		} else {
-			slotsTitleLabel.setVisible(true);
-			slotsLabel.setVisible(true);
-			percentTitleLabel.setVisible(true);
-			percentLabel.setVisible(true);
+			progressWrapper.setVisible(true);
+			int completedSlots = totalSlots - slotsLeft;
 
-			if (slotsLeft == 0) {
-				slotsLabel.setText(totalSlots + " / " + totalSlots);
-				percentLabel.setText("Completed!");
-				percentLabel.setForeground(ColorScheme.PROGRESS_COMPLETE_COLOR);
-			} else {
-				slotsLabel.setText(slotsLeft + " / " + totalSlots);
-				double percentComplete = ((double) (totalSlots - slotsLeft) / totalSlots) * 100.0;
-				percentLabel.setText(String.format("%.1f%%", percentComplete));
-				percentLabel.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
-			}
+			progressBar.setMaximum(totalSlots);
+			progressBar.setValue(completedSlots);
+
+			// Set perfectly crisp label text
+			progressLabel.setText(completedSlots + " / " + totalSlots);
+
+			double percentComplete = ((double) completedSlots / totalSlots) * 100.0;
+			Color pctColor = calculateColorScale(percentComplete, 0.0, 80.0, 100.0,
+				ColorScheme.PROGRESS_ERROR_COLOR, Color.YELLOW, ColorScheme.PROGRESS_COMPLETE_COLOR);
+
+			progressBar.setForeground(pctColor);
 		}
 
-		fastestRewardLabel.setText(best.getFastestRewardName());
-		Reward fastest = result.getFastestReward();
-		if (fastest instanceof ItemReward) {
-			fastestRewardLabel.setToolTipText("Item ID: " + ((ItemReward) fastest).getItemId());
-		} else if (fastest instanceof LevelReward) {
-			LevelReward lvl = (LevelReward) fastest;
-			fastestRewardLabel.setToolTipText("Target: Level " + lvl.getTargetLevel() + " " + lvl.getSkill().getName());
-		} else {
-			fastestRewardLabel.setToolTipText(null);
-		}
+		// --- Metrics Split Line (Time Left, Difficulty Right) ---
+		Color timeColor = calculateColorScale(result.getHours(), 0.0, 6.0, 48.0,
+			ColorScheme.PROGRESS_COMPLETE_COLOR, Color.YELLOW, ColorScheme.PROGRESS_ERROR_COLOR);
+		String timeHex = String.format("#%02x%02x%02x", timeColor.getRed(), timeColor.getGreen(), timeColor.getBlue());
+
+		String timeStr = formatTimeDetailed(result.getHours());
+		String diffStr = activity.getDifficulty();
+
+		timeLabel.setText("<html>Est. Time: <font color='" + timeHex + "'>" + timeStr + "</font></html>");
+		difficultyLabel.setText("Difficulty: " + diffStr + "/8");
+
+		// --- Wiki Link Logic ---
+		currentWikiLink = activity.getWikiLink();
+		wikiButton.setVisible(currentWikiLink != null && !currentWikiLink.isEmpty());
 	}
 
 	/**
@@ -602,6 +722,8 @@ public class LogHunterPanel extends PluginPanel
 		panel.setBackground(ColorScheme.DARKER_GRAY_COLOR);
 		panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
 
+		panel.setAlignmentX(Component.LEFT_ALIGNMENT);
+
 		String fullName = suggestion.getActivity().getName();
 		String truncatedName = truncate(fullName);
 
@@ -616,11 +738,26 @@ public class LogHunterPanel extends PluginPanel
 		timeLbl.setForeground(ColorScheme.LIGHT_GRAY_COLOR);
 		timeLbl.setFont(FontManager.getRunescapeSmallFont());
 
-		JButton skipBtn = new JButton("X");
+		JButton skipBtn = new JButton(blockIcon);
 		skipBtn.setPreferredSize(new Dimension(20, 20));
 		skipBtn.setMargin(new Insets(0, 0, 0, 0));
 		skipBtn.setToolTipText("Skip this activity");
 		skipBtn.setFocusable(false);
+		skipBtn.setContentAreaFilled(false);
+		skipBtn.setBorderPainted(false);
+
+		// Add Image Swapping Hover Listener
+		skipBtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				skipBtn.setIcon(blockHoverIcon);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				skipBtn.setIcon(blockIcon);
+			}
+		});
+
 		skipBtn.addActionListener(e -> onSkipActivity.accept(suggestion.getActivity().getName()));
 
 		rightPanel.add(timeLbl, BorderLayout.CENTER);
