@@ -90,10 +90,8 @@ public class LogHunterPanel extends PluginPanel
 	// Restructured Top Stats UI
 	private final JLabel targetLabel = new JLabel();
 	private final JPanel progressWrapper = new JPanel(new BorderLayout()); // Added Wrapper
-	private final JPanel progressContainer = new JPanel();
 	private final JProgressBar progressBar = new JProgressBar();
 	private final ShadowLabel progressLabel = new ShadowLabel();
-	private final JPanel metricsPanel = new JPanel(new BorderLayout());
 	private final JLabel timeLabel = new JLabel();
 	private final JLabel difficultyLabel = new JLabel();
 
@@ -254,6 +252,7 @@ public class LogHunterPanel extends PluginPanel
 		c.gridy++;
 
 		// Progress Bar Overlay
+		JPanel progressContainer = new JPanel();
 		progressContainer.setLayout(new OverlayLayout(progressContainer));
 		progressContainer.setOpaque(false);
 
@@ -282,6 +281,7 @@ public class LogHunterPanel extends PluginPanel
 		c.gridy++;
 
 		// Metrics Split Line (Time Left, Difficulty Right)
+		JPanel metricsPanel = new JPanel(new BorderLayout());
 		metricsPanel.setOpaque(false);
 		metricsPanel.add(timeLabel, BorderLayout.WEST);
 		metricsPanel.add(difficultyLabel, BorderLayout.EAST);
@@ -476,6 +476,7 @@ public class LogHunterPanel extends PluginPanel
 	/**
 	 * Calculates a color based on a 3-point gradient scale.
 	 */
+	@SuppressWarnings("SameParameterValue")
 	private Color calculateColorScale(double value, double minPoint, double midPoint, double maxPoint, Color minColor, Color midColor, Color maxColor) {
 		if (value <= minPoint) return minColor;
 		if (value >= maxPoint) return maxColor;
