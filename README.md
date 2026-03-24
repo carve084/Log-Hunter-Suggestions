@@ -1,21 +1,23 @@
 # Log Hunter Suggestions 📗
 
-Ever stared at your Collection Log and had no idea what to grind next? I built **Log Hunter Suggestions** to help you find the "low-hanging fruit." It looks at your current stats, quest completions, and existing unlocks to answer one simple question: **"What's the quickest thing I can finish right now?"**
+Ever stared at your Collection Log and had no idea what to grind next? I built **Log Hunter Suggestions** to cure decision paralysis and help you find the low-hanging fruit. It looks at your current stats, quest completions, and existing unlocks to answer one simple question: **"What's the quickest thing I can finish right now?"**
 
-## How it Works
-
-To keep things simple for this initial version, I'm using **optimistic, high-efficiency estimates** for the math.
-
-* **The Rates:** The "Time to Finish" calculations assume you're playing at near-peak efficiency (the kind of rates you see in high-level Wiki guides).
-* **Reality Check:** Unless you're a tick-perfect gaming god, your actual time will likely be a bit slower. Think of these as "Best Case Scenarios"—if the plugin says an item is fast to get even at sweaty rates, it's definitely a good place to start!
-* **Future Updates:** I'm planning to add "Average Gamer" estimates in a future update, but for now, I'm sticking with the most optimistic outlook.
+Instead of spending 30 minutes cross-referencing Wiki guides, let the plugin highlight the fastest wins!
 
 ## Main Features
 
+* **Smart Requirements (Quality of Life):** The plugin automatically hides activities you can't actually do yet because of missing quests or low levels. You only see grinds you can start right now.
+* **Ironman Friendly:** A toggle in the settings swaps the math to use Ironman-specific drop rates and methods.
 * **Quick Slots:** Finds missing items with the best drop rates based on how fast a boss can be cleared.
 * **Easy Levels:** Highlights training methods that will get you to your next skill milestone the fastest.
-* **Smart Requirements:** I've made sure the plugin automatically hides activities you can't actually do yet because of missing quests or low levels.
-* **Ironman Friendly:** A simple toggle in the settings swaps the math to use Ironman-specific drop rates and methods.
+* **Instant Wiki Access:** Top suggestions feature a "Wiki" button linking directly to OSRS Wiki strategy guides.
+
+## Installation
+
+You can install this directly through RuneLite:
+1. Open your RuneLite configuration panel.
+2. Click the **Plugin Hub** icon (the plug).
+3. Search for **Log Hunter Suggestions** and click Install.
 
 ## How to get started
 
@@ -25,20 +27,39 @@ RuneLite doesn't know what's in your Collection Log until you show it to the plu
 2. **Click the Tabs and Pages:** Follow the indicator in the side panel and click through the 5 main categories (Bosses, Raids, Minigames, Other, and Clues).
 3. **Get Suggestions:** Once the plugin sees your log, the list will populate instantly.
 
-## Settings
+## How the Math Works
 
-* **Enforce Recommendations:** Turn this off if you want to see activities that you *can* technically do, but shouldn't yet because your stats are too low for it to be efficient.
-* **Suggestion Count:** Choose how many activities you want to see in your list.
-* **Debug Mode:** For the curious—see the raw math or manually toggle item IDs to see how the "Time to Reward" changes.
+To rank your tasks, the "Time to Finish" calculations use optimistic, best case estimates.
 
-## FAQ
-
-**Is this going to tell me to go 3-tick Teaks?**
-Only if it's the fastest way for you to level up! Just remember: the time estimates assume you're doing the method efficiently.
-
-**Does this track my data?**
-Nope. Everything stays on your computer in your RuneLite folder. I just want to help you fill that log.
+* **The Engine:** These rates assume near-peak efficiency (the kind of rates you see in high-level Wiki guides).
+* **The Reality:** Unless you're a tick-perfect gaming god, your actual time will likely be a bit slower. Think of these as a baseline—if the plugin says an item is fast to get even at peak rates, it's definitely a good place to start!
 
 ---
 
-*Created by **carve084**. If you find a bug or a drop rate that feels off, please open an issue on GitHub!*
+## For Developers: Under the Hood
+
+If you are interested in the code, here is a quick overview of the architecture. I built this to be as lightweight and non-intrusive on the client as possible.
+
+* **Tech Stack:** Java 11, RuneLite API, Lombok, Gson.
+* **Data Pipeline:** Drop rates and requirements are managed in Google Sheets, then processed via a Python script (`convert.py`) into Polymorphic JSON.
+* **Event-Driven Performance:** Rather than manually scanning UI widgets, the plugin listens for `ChatMessage` server broadcasts to instantly update the collection log state.
+* **Memory & Caching:** The math engine uses `transient` enum caches and a name-to-ID `itemNameCache` for high-performance lookups.
+* **Storage:** Data is account-isolated and stored locally at `~/.runelite/log-hunter/<account_hash>/log_data.json`.
+
+### Local Development
+
+1. Clone the repository.
+2. Open the project in IntelliJ.
+3. Allow Gradle to sync the dependencies.
+4. Run the `RuneLite` run configuration to test changes in the development client.
+
+## Credits & Community
+
+* **Data Source:** A massive thank you to **Mukkor** for creating and maintaining the [Log Advisor spreadsheet](https://docs.google.com/spreadsheets/d/1leQSz5gJdO1IqjVuSVpIvpQIA0P6ah18DMR8otnojuE) that powers the math behind these suggestions. (Note: The plugin's data pipeline will be updated periodically to sync with new releases from this sheet).
+* **Community:** Come hang out in the [Log Hunters Discord](https://discord.gg/loghunters)! It is a fantastic community of completionists, and I am an active member there.
+
+## Issues & Feedback
+
+Created by **carve084**.
+
+If you find a bug or a drop rate that feels off, please open an issue on GitHub!
