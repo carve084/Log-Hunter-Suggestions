@@ -80,8 +80,6 @@ public class LogHunterPanel extends PluginPanel
 		}
 	}
 
-	private final JPanel mainContainer = new JPanel();
-
 	// Top Result UI
 	private final JPanel topResultPanel = new JPanel();
 	private final JLabel activityNameLabel = new JLabel();
@@ -198,6 +196,7 @@ public class LogHunterPanel extends PluginPanel
 		});
 
 		// Use GridBagLayout for the scrolling container to force width constraints
+		JPanel mainContainer = new JPanel();
 		mainContainer.setLayout(new GridBagLayout());
 		mainContainer.setBorder(new EmptyBorder(10, 5, 10, 5));
 
@@ -530,8 +529,8 @@ public class LogHunterPanel extends PluginPanel
 				scanWarningLabel.setVisible(false);
 				loginMessageLabel.setVisible(true);
 
-				mainContainer.revalidate();
-				mainContainer.repaint();
+				revalidate();
+				repaint();
 				return;
 			}
 
@@ -546,8 +545,8 @@ public class LogHunterPanel extends PluginPanel
 				skippedActivitiesPanel.setVisible(false);
 				scanWarningLabel.setVisible(true);
 
-				mainContainer.revalidate();
-				mainContainer.repaint();
+				revalidate();
+				repaint();
 				return;
 			}
 
@@ -594,8 +593,8 @@ public class LogHunterPanel extends PluginPanel
 				}
 
 				if (isDebugMode) debugLogArea.setText("No activities left.");
-				mainContainer.revalidate();
-				mainContainer.repaint();
+				revalidate();
+				repaint();
 				return;
 			}
 
@@ -640,8 +639,8 @@ public class LogHunterPanel extends PluginPanel
 				debugLogArea.setText(sb.toString());
 			}
 
-			mainContainer.revalidate();
-			mainContainer.repaint();
+			revalidate();
+			repaint();
 		});
 	}
 
