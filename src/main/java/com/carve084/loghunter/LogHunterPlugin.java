@@ -36,6 +36,7 @@ import net.runelite.api.events.GameTick;
 import net.runelite.api.events.StatChanged;
 import net.runelite.api.events.VarbitChanged;
 import net.runelite.api.gameval.InterfaceID;
+import net.runelite.api.gameval.VarPlayerID;
 import net.runelite.api.widgets.Widget;
 import net.runelite.client.RuneLite;
 import net.runelite.client.callback.ClientThread;
@@ -100,9 +101,12 @@ public class LogHunterPlugin extends Plugin
 	private final Map<Skill, Integer> cachedLevels = new HashMap<>();
 
 	// Core Engine Flags
-	private boolean calculationPending = false;
+	private java.util.concurrent.ScheduledFuture<?> calculationTask;
 	private boolean requiresScan = false;
 	private boolean pendingQuestCheck = false;
+	private int cachedClogCount = -1;
+	private int clogDebounceTicks = 0;
+	private boolean hasUnidentifiedSlots = false;
 	private PluginData pluginData = new PluginData();
 	private List<Activity> activities = new ArrayList<>();
 
@@ -298,7 +302,7 @@ public class LogHunterPlugin extends Plugin
 
 			if (file == null || !file.exists())
 			{
-				log.info("No saved data for this account. Please open the 📗 Collection Log to begin scanning.");
+				log.info("No saved data for this account. Please open the Collection Log to begin scanning.");
 				clientThread.invokeLater(() -> {
 					pluginData = new PluginData();
 					evaluateScanRequirement();
@@ -410,6 +414,10 @@ public class LogHunterPlugin extends Plugin
 			incompleteQuests.clear();
 			isQuestCachePrimed = false;
 			requiresScan = false;
+			cachedClogCount = -1;
+			clogDebounceTicks = 0;
+			hasUnidentifiedSlots = false;
+
 			queueCalculateSuggestions();
 		}
 	}
@@ -439,6 +447,9 @@ public class LogHunterPlugin extends Plugin
 				pluginData.getLogData().put(itemId, 1);
 				saveData();
 
+				clogDebounceTicks = 0;
+				hasUnidentifiedSlots = false;
+
 				// Phase 4: Trigger Math Engine
 				queueCalculateSuggestions();
 				log.info("Event-Driven Loot Detected: Acquired {} (ID: {}). Re-calculating Best Case times.", itemName, itemId);
@@ -459,8 +470,14 @@ public class LogHunterPlugin extends Plugin
 	{
 		if (client.getGameState() != GameState.LOGGED_IN) return;
 
-		// Safely flag that a varbit changed, but DO NOT run CS2 scripts here!
 		pendingQuestCheck = true;
+
+		int currentClogCount = client.getVarpValue(VarPlayerID.COLLECTION_COUNT);
+		if (cachedClogCount != -1 && currentClogCount > cachedClogCount) {
+			cachedClogCount = currentClogCount;
+			// Set a 3-tick window to wait for a specific chat message
+			clogDebounceTicks = 3;
+		}
 	}
 
 	/**
@@ -518,6 +535,20 @@ public class LogHunterPlugin extends Plugin
 	@Subscribe
 	public void onGameTick(GameTick event)
 	{
+		// Grab the true value on the first game tick after login
+		if (cachedClogCount == -1) {
+			cachedClogCount = client.getVarpValue(VarPlayerID.COLLECTION_COUNT);
+		}
+
+		if (clogDebounceTicks > 0) {
+			clogDebounceTicks--;
+			if (clogDebounceTicks == 0) {
+				// The window closed without a chat message. We are flying blind.
+				hasUnidentifiedSlots = true;
+				queueCalculateSuggestions(); // Force UI update to show banner
+			}
+		}
+
 		if (pendingQuestCheck)
 		{
 			pendingQuestCheck = false; // Consume the flag
@@ -653,6 +684,19 @@ public class LogHunterPlugin extends Plugin
 			}
 		}
 
+		if (hasUnidentifiedSlots) {
+			int localCount = 0;
+			for (Integer status : pluginData.getLogData().values()) {
+				if (status == 1) localCount++;
+			}
+
+			// If our local scraped count catches up to the server count, clear the warning
+			if (localCount >= cachedClogCount) {
+				hasUnidentifiedSlots = false;
+				dataChanged = true;
+			}
+		}
+
 		if (dataChanged) {
 			log.info("Log data changed. Saving and queuing evaluation...");
 			saveData();
@@ -736,19 +780,26 @@ public class LogHunterPlugin extends Plugin
 	}
 
 	/**
-	 * Queues a new suggestion calculation to be run on the client thread.
-	 * This method acts as a debouncer, ensuring that multiple rapid-fire events
-	 * (e.g., during login) only result in a single calculation.
+	 * Queues a new suggestion calculation.
+	 * Uses a 400ms debounce window. If rapid-fire events occur (like rapidly clicking
+	 * through Collection Log pages), the timer resets, preventing the heavy math engine
+	 * from bottlenecking the ClientThread.
 	 */
 	private void queueCalculateSuggestions()
 	{
-		if (calculationPending) return;
-		calculationPending = true;
+		// 1. Cancel the previously queued calculation if it hasn't executed yet
+		if (calculationTask != null && !calculationTask.isDone())
+		{
+			calculationTask.cancel(false);
+		}
 
-		clientThread.invokeLater(() -> {
-			calculationPending = false;
-			calculateSuggestions();
-		});
+		// 2. Schedule a new calculation 400ms in the future
+		calculationTask = executor.schedule(() -> {
+
+			// 3. Push the math back to the ClientThread safely once the user stops clicking
+			clientThread.invokeLater(this::calculateSuggestions);
+
+		}, 400, java.util.concurrent.TimeUnit.MILLISECONDS);
 	}
 
 	/**
@@ -771,6 +822,7 @@ public class LogHunterPlugin extends Plugin
 				config.suggestionCount(),
 				false, // isLoggedIn
 				false, // requiresScan
+				hasUnidentifiedSlots,
 				false  // isFullyCompleted (Irrelevant here)
 			));
 			return;
@@ -787,6 +839,7 @@ public class LogHunterPlugin extends Plugin
 				config.suggestionCount(),
 				true,
 				true,
+				hasUnidentifiedSlots,
 				false
 			));
 			return;
@@ -852,6 +905,7 @@ public class LogHunterPlugin extends Plugin
 			config.suggestionCount(),
 			true,
 			false,
+			hasUnidentifiedSlots,
 			isFullyCompleted
 		));
 	}

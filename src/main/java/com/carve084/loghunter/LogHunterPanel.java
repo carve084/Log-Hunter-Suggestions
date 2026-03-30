@@ -125,6 +125,13 @@ public class LogHunterPanel extends PluginPanel
 			"</div></html>"
 	);
 
+	// Unidentified Slots Banner
+	private final JLabel unidentifiedWarningLabel = new JLabel(
+		"<html><div style='text-align: center; width: 160px;'>" +
+			"Unidentified log slot(s) unlocked.<br>Open your Collection Log to sync." +
+			"</div></html>"
+	);
+
 	// Skipped & Debug UI
 	private final JPanel skippedActivitiesPanel = new JPanel();
 	private final JPanel debugPanel = new JPanel();
@@ -425,7 +432,13 @@ public class LogHunterPanel extends PluginPanel
 		scanWarningLabel.setForeground(ColorScheme.BRAND_ORANGE);
 		scanWarningLabel.setVisible(false);
 
+		unidentifiedWarningLabel.setHorizontalAlignment(JLabel.CENTER);
+		unidentifiedWarningLabel.setForeground(ColorScheme.BRAND_ORANGE);
+		unidentifiedWarningLabel.setVisible(false);
+
 		mainContainer.add(topResultPanel, mainGc);
+		mainGc.gridy++;
+		mainContainer.add(unidentifiedWarningLabel, mainGc);
 		mainGc.gridy++;
 		mainContainer.add(runnerUpPanel, mainGc);
 		mainGc.gridy++;
@@ -513,11 +526,13 @@ public class LogHunterPanel extends PluginPanel
 		int suggestionLimit,
 		boolean isLoggedIn,
 		boolean requiresScan,
+		boolean hasUnidentifiedSlots,
 		boolean isFullyCompleted)
 	{
 		SwingUtilities.invokeLater(() ->
 		{
 			debugPanel.setVisible(isDebugMode);
+			unidentifiedWarningLabel.setVisible(hasUnidentifiedSlots);
 
 			// --- HANDLE NOT LOGGED IN STATE ---
 			if (!isLoggedIn) {
