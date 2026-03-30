@@ -16,7 +16,6 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
-import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -96,7 +95,8 @@ public class LogHunterPlugin extends Plugin
 
 	// State Caches
 	private final transient Map<String, Integer> itemNameCache = new HashMap<>();
-	private final Map<Quest, QuestState> cachedQuestStates = new EnumMap<>(Quest.class);
+	private final Set<Quest> incompleteQuests = java.util.EnumSet.noneOf(Quest.class);
+	private boolean isQuestCachePrimed = false;
 	private final Map<Skill, Integer> cachedLevels = new HashMap<>();
 
 	// Core Engine Flags
@@ -402,13 +402,13 @@ public class LogHunterPlugin extends Plugin
 		if (state == GameState.LOGGED_IN)
 		{
 			loadData();
-			// Removed the premature quest cache priming loop from here!
 			queueCalculateSuggestions();
 		}
 		else if (state == GameState.LOGIN_SCREEN || state == GameState.HOPPING)
 		{
 			pluginData = new PluginData();
-			cachedQuestStates.clear(); // This ensures isInitialPrime will be true on the next login
+			incompleteQuests.clear();
+			isQuestCachePrimed = false;
 			requiresScan = false;
 			queueCalculateSuggestions();
 		}
@@ -663,34 +663,45 @@ public class LogHunterPlugin extends Plugin
 	// --- CORE LOGIC ENGINE ---
 
 	/**
-	 * Scans all quests and updates the local state cache.
+	 * Scans incomplete quests and updates the local state cache.
 	 * Silently absorbs the initial wave of varbit data sent by the server upon
 	 * logging in to prevent false-positive completion events.
-	 * * @return true if a quest recently transitioned to the FINISHED state during active gameplay.
+	 * @return true if a quest recently transitioned to the FINISHED state during active gameplay.
 	 */
 	private boolean checkQuestCompletions()
 	{
 		boolean newlyCompleted = false;
-		// If the cache is empty, we are absorbing the initial varbit sync from logging in
-		boolean isInitialPrime = cachedQuestStates.isEmpty();
 
-		for (Quest quest : Quest.values())
+		// 1. The Initial Prime: Absorb the login varbit sync
+		if (!isQuestCachePrimed)
 		{
-			QuestState currentState = quest.getState(client);
-			QuestState previousState = cachedQuestStates.get(quest);
-
-			if (currentState != previousState)
+			for (Quest quest : Quest.values())
 			{
-				cachedQuestStates.put(quest, currentState);
-
-				// Only trigger if it's an actual state change during gameplay, not the initial sync
-				if (!isInitialPrime && currentState == QuestState.FINISHED)
+				if (quest.getState(client) != QuestState.FINISHED)
 				{
-					newlyCompleted = true;
-					log.info("Event-Driven Quest Detected: {} completed. Re-calculating Best Case times.", quest.getName());
+					incompleteQuests.add(quest);
 				}
 			}
+			isQuestCachePrimed = true;
+			return false; // Nothing "newly" completed during gameplay yet
 		}
+
+		// 2. The Polling Loop & Prune: Only check quests we know aren't done
+		java.util.Iterator<Quest> iterator = incompleteQuests.iterator();
+		while (iterator.hasNext())
+		{
+			Quest quest = iterator.next();
+
+			if (quest.getState(client) == QuestState.FINISHED)
+			{
+				newlyCompleted = true;
+				log.info("Event-Driven Quest Detected: {} completed. Re-calculating Best Case times.", quest.getName());
+
+				// Prune the quest from our tracking list so we never check it again
+				iterator.remove();
+			}
+		}
+
 		return newlyCompleted;
 	}
 
