@@ -482,19 +482,20 @@ public class LogHunterPlugin extends Plugin
 
 	/**
 	 * Fired when a player's skill level or experience changes.
-	 * Caches the new level and queues a recalculation to update suggestions
-	 * that may be affected by the new stat.
+	 * Caches the real base level and queues a recalculation to update suggestions
+	 * only when a true level-up occurs, explicitly ignoring temporary boosts/drains.
 	 * @param event The stat change event.
 	 */
 	@Subscribe
 	public void onStatChanged(StatChanged event)
 	{
-		int currentLevel = event.getLevel();
-		Integer previousLevel = cachedLevels.get(event.getSkill());
+		// Use the client's real skill level rather than the event's boosted level
+		int currentBaseLevel = client.getRealSkillLevel(event.getSkill());
+		Integer previousBaseLevel = cachedLevels.get(event.getSkill());
 
-		if (previousLevel == null || previousLevel != currentLevel)
+		if (previousBaseLevel == null || previousBaseLevel != currentBaseLevel)
 		{
-			cachedLevels.put(event.getSkill(), currentLevel);
+			cachedLevels.put(event.getSkill(), currentBaseLevel);
 			queueCalculateSuggestions();
 		}
 	}
